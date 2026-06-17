@@ -1,0 +1,1065 @@
+{
+  "1": {
+    "slug": "1",
+    "name": "公司产业",
+    "banner": {
+      "bgImage": "https://www.zggt-group.com/public/uploads/images/20210618/c698b9b3faaf00124f248a1189e208c9.jpg",
+      "h2": "公司产业",
+      "h3": ""
+    },
+    "cateLinks": [
+      {
+        "text": "不锈钢表面处理",
+        "href": "https://www.zggt-group.com/list/190.html"
+      },
+      {
+        "text": "铜材表面处理",
+        "href": "https://www.zggt-group.com/list/191.html"
+      },
+      {
+        "text": "铝材表面处理",
+        "href": "https://www.zggt-group.com/list/192.html"
+      }
+    ],
+    "contentImages": [
+      {
+        "src": "https://www.zggt-group.com/public/uploads/images/20210813/02977b82018d6a4e921d72e932835800.jpg",
+        "alt": "",
+        "width": 440,
+        "height": 260
+      },
+      {
+        "src": "https://www.zggt-group.com/public/uploads/images/20210617/e090a4b55863a738c10ca0234cee4e64.jpg",
+        "alt": "",
+        "width": 440,
+        "height": 260
+      },
+      {
+        "src": "https://www.zggt-group.com/public/uploads/images/20210813/396f2128edcb1be85f63467a39d2e94f.jpg",
+        "alt": "",
+        "width": 440,
+        "height": 260
+      },
+      {
+        "src": "https://www.zggt-group.com/public/uploads/images/20210617/9d8ac3e4c479b7903f424355be8f1563.jpg",
+        "alt": "",
+        "width": 440,
+        "height": 260
+      },
+      {
+        "src": "https://www.zggt-group.com/public/uploads/images/20210617/0114934ce20c38662ec6a66bdacd83ef.jpg",
+        "alt": "",
+        "width": 440,
+        "height": 260
+      },
+      {
+        "src": "https://www.zggt-group.com/public/uploads/images/20210617/1f277d8feba9165df579b213c71f377d.jpg",
+        "alt": "",
+        "width": 440,
+        "height": 260
+      }
+    ],
+    "contentSections": [
+      {
+        "tag": "div",
+        "cls": "inner-page product-list",
+        "textSnippet": "公司产业\n\t\t\t\n\t\t\t\n\t\t\t\n\n\t\t\t\n\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t抛光技术\n\t\t\t\t\t\t\t\t铜化学抛光是一种在铜及其合金表面进行的化学弱腐蚀的过程中达到光亮的抛光工艺。经过化学抛光后铜表面非常光滑光亮，尽显铜本色，甚至可以使铜表面产生镜面反射。铜化学抛光液维护方便、操作安全、无有害气体逸出。\n\t\t\t\t\t\t\t\t查看详情\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t钝化技术\n\t\t\t\t\t\t\t\t铜材工件未经处理极容易氧化变色腐蚀，这是由于铜元素的最外层电子轨道为非饱满的稳定状态，容易失去1、2个电子而被氧化。\n\t\t\t\t\t\t\t\t查看详情\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t钝化技术\n\t\t\t\t\t\t\t\t一般来说，易离子化的金属容易氧化，即容易腐蚀，而事实上并非"
+      },
+      {
+        "tag": "script",
+        "cls": "",
+        "textSnippet": "$('.search_box .icon').click(function(){\n\t\t$('.ss_big_box').fadeIn(0);\n\t\t$('.ss_box').css('margin-left','0');\n\t})\n\t$('.ss_box .close').click(function(){\n\t\t$('.ss_box').css('margin-left','300px');\n\t\tsetTimeout(function(){\n\t\t\t$('.ss_big_box').fadeOut(0);\n\t\t},300)\n\t})"
+      }
+    ],
+    "title": "公司产业",
+    "bgImages": [
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/search.png",
+        "cls": "icon"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/close.png",
+        "cls": "close"
+      },
+      {
+        "url": "https://www.zggt-group.com/public/uploads/images/20210618/c698b9b3faaf00124f248a1189e208c9.jpg",
+        "cls": "bann"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/rightmenu-icon.png",
+        "cls": "r-top"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/rightmenu-icon.png",
+        "cls": "r-phone"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/rightmenu-icon.png",
+        "cls": "r-code"
+      }
+    ]
+  },
+  "6": {
+    "slug": "6",
+    "name": "关于光泰",
+    "banner": {
+      "bgImage": "",
+      "h2": "",
+      "h3": ""
+    },
+    "cateLinks": [],
+    "contentImages": [
+      {
+        "src": "https://www.zggt-group.com/template/default/skin/images/about_pic.jpg",
+        "alt": "",
+        "width": 1920,
+        "height": 848
+      },
+      {
+        "src": "https://www.zggt-group.com/public/uploads/images/20210615/a553687a400038bbbb564d58a9a152a9.jpg",
+        "alt": "1",
+        "width": 300,
+        "height": 424
+      },
+      {
+        "src": "https://www.zggt-group.com/public/uploads/images/20210615/31311ed0f27553ed13d671839372de65.jpg",
+        "alt": "2",
+        "width": 300,
+        "height": 424
+      },
+      {
+        "src": "https://www.zggt-group.com/public/uploads/images/20210615/e80c67a2f7be57cf579caadf13994e3c.jpg",
+        "alt": "3",
+        "width": 300,
+        "height": 424
+      },
+      {
+        "src": "https://www.zggt-group.com/public/uploads/images/20210615/8109afd5d401419cc377bd3a0a73a658.jpg",
+        "alt": "4",
+        "width": 300,
+        "height": 424
+      },
+      {
+        "src": "https://www.zggt-group.com/public/uploads/images/20210615/0bfd66abacb0d4aac70f9e0ae6ff0bb6.jpg",
+        "alt": "5",
+        "width": 300,
+        "height": 424
+      },
+      {
+        "src": "https://www.zggt-group.com/public/uploads/images/20210615/e9894ab76843e8716a57b68b054fc771.jpg",
+        "alt": "6",
+        "width": 300,
+        "height": 424
+      },
+      {
+        "src": "https://www.zggt-group.com/public/uploads/images/20210615/75c13c354cef98f31a4fa9c1152dede2.jpg",
+        "alt": "7",
+        "width": 300,
+        "height": 424
+      },
+      {
+        "src": "https://www.zggt-group.com/public/uploads/images/20210615/a44e6b749bb7f072094b3b61ebe55fc4.jpg",
+        "alt": "8",
+        "width": 300,
+        "height": 424
+      },
+      {
+        "src": "https://www.zggt-group.com/public/uploads/images/20210615/079e996677362c911ce9b81d579dafbd.jpg",
+        "alt": "9",
+        "width": 300,
+        "height": 424
+      },
+      {
+        "src": "https://www.zggt-group.com/public/uploads/images/20210615/f0c9415292dbc729c8e05242fa9324b4.jpg",
+        "alt": "10",
+        "width": 300,
+        "height": 424
+      },
+      {
+        "src": "https://www.zggt-group.com/public/uploads/images/20210615/6452aa742b2274cbd2ae1bc0f7093074.jpg",
+        "alt": "11",
+        "width": 300,
+        "height": 424
+      },
+      {
+        "src": "https://www.zggt-group.com/public/uploads/images/20210705/55bbc46b22e6335339ae2c49068375db.jpg",
+        "alt": "广州技术展览会",
+        "width": 693,
+        "height": 390
+      },
+      {
+        "src": "https://www.zggt-group.com/public/uploads/images/20210705/bf3a83f9224cd29a233ee20c263678ae.jpg",
+        "alt": "宁波技术展览会",
+        "width": 693,
+        "height": 390
+      },
+      {
+        "src": "https://www.zggt-group.com/public/uploads/images/20210705/25ededa586a7a3199a6f8887ca2db5e6.jpg",
+        "alt": "长沙技术展览会",
+        "width": 693,
+        "height": 390
+      },
+      {
+        "src": "https://www.zggt-group.com/public/uploads/images/20210705/be7677935f8427f85024409db8ebe52d.jpg",
+        "alt": "2019年年会合影",
+        "width": 693,
+        "height": 390
+      },
+      {
+        "src": "https://www.zggt-group.com/public/uploads/images/20210705/feb2e941e6f1df818d6482e929f86240.jpg",
+        "alt": "2020年会颁奖",
+        "width": 693,
+        "height": 390
+      },
+      {
+        "src": "https://www.zggt-group.com/public/uploads/images/20210705/7933e6f09931f546b40f0bf848092cb3.jpg",
+        "alt": "2020年会合影",
+        "width": 693,
+        "height": 390
+      },
+      {
+        "src": "https://www.zggt-group.com/public/uploads/images/20210705/48435fbdd00db354fcf67fe289af4cfc.jpg",
+        "alt": "泸沽湖之游",
+        "width": 693,
+        "height": 390
+      },
+      {
+        "src": "https://www.zggt-group.com/public/uploads/images/20210705/82b9e0ae3eb6945a16a22f3bfa3aa82e.jpg",
+        "alt": "清远之游",
+        "width": 693,
+        "height": 390
+      },
+      {
+        "src": "https://www.zggt-group.com/public/uploads/images/20210705/65c37bc058d0cd546ec2cbddfffb3955.jpg",
+        "alt": "象山之游",
+        "width": 693,
+        "height": 390
+      },
+      {
+        "src": "https://www.zggt-group.com/public/uploads/images/20210705/34794e89d1201c0316d760ac815f08b2.jpg",
+        "alt": "支援湖南省抗疫情掠影",
+        "width": 693,
+        "height": 390
+      },
+      {
+        "src": "https://www.zggt-group.com/public/uploads/images/20210705/d0ba89c410c07ba6422572c31d1bebd7.jpg",
+        "alt": "支援涟源市安平镇镇掠影",
+        "width": 693,
+        "height": 390
+      },
+      {
+        "src": "https://www.zggt-group.com/public/uploads/images/20210705/85b79230741f52443a10ff15f3c07c09.jpg",
+        "alt": "支援谢岗人民镇府支援掠影",
+        "width": 693,
+        "height": 390
+      }
+    ],
+    "contentSections": [],
+    "title": "关于光泰",
+    "bgImages": [
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/search.png",
+        "cls": "icon"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/close.png",
+        "cls": "close"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/abouttt.jpg",
+        "cls": "img"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/about/about3_bg.jpg",
+        "cls": "about_sec3"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/img33.jpg",
+        "cls": "B"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/img33.jpg",
+        "cls": "B"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/img33.jpg",
+        "cls": "B"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/img33.jpg",
+        "cls": "B"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/img33.jpg",
+        "cls": "B"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/img33.jpg",
+        "cls": "B"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/img33.jpg",
+        "cls": "B"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/img33.jpg",
+        "cls": "B"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/img33.jpg",
+        "cls": "B"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/img33.jpg",
+        "cls": "B"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/img33.jpg",
+        "cls": "B"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/img33.jpg",
+        "cls": "B"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/img33.jpg",
+        "cls": "B"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/img33.jpg",
+        "cls": "B"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/img33.jpg",
+        "cls": "B"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/img33.jpg",
+        "cls": "B"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/img33.jpg",
+        "cls": "B"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/img33.jpg",
+        "cls": "B"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/img33.jpg",
+        "cls": "B"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/img33.jpg",
+        "cls": "B"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/img33.jpg",
+        "cls": "B"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/img33.jpg",
+        "cls": "B"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/img33.jpg",
+        "cls": "B"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/img33.jpg",
+        "cls": "B"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/img33.jpg",
+        "cls": "B"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/img33.jpg",
+        "cls": "B"
+      },
+      {
+        "url": "https://www.zggt-group.com/images/line03.png",
+        "cls": "about-dpp"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/rightmenu-icon.png",
+        "cls": "r-top"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/rightmenu-icon.png",
+        "cls": "r-phone"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/rightmenu-icon.png",
+        "cls": "r-code"
+      }
+    ]
+  },
+  "179": {
+    "slug": "179",
+    "name": "联系我们",
+    "banner": {
+      "bgImage": "https://www.zggt-group.com/public/uploads/images/20210618/3caeea790f66811b6a48972704d67ad9.jpg",
+      "h2": "联系我们",
+      "h3": ""
+    },
+    "cateLinks": [],
+    "contentImages": [
+      {
+        "src": "https://www.zggt-group.com/template/default/skin/images/rtf_kf11.png",
+        "alt": "服务热线",
+        "width": 46,
+        "height": 46
+      },
+      {
+        "src": "https://www.zggt-group.com/template/default/skin/images/rtf_kf5.png",
+        "alt": "服务热线",
+        "width": 46,
+        "height": 46
+      },
+      {
+        "src": "https://www.zggt-group.com/template/default/skin/images/lxtelephone.png",
+        "alt": "移动电话",
+        "width": 46,
+        "height": 46
+      },
+      {
+        "src": "https://www.zggt-group.com/template/default/skin/images/rtf_kf8.png",
+        "alt": "地址",
+        "width": 46,
+        "height": 46
+      },
+      {
+        "src": "https://webrd01.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=7&x=3343&y=1779&z=12",
+        "alt": "",
+        "width": 256,
+        "height": 256
+      },
+      {
+        "src": "https://webrd01.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=7&x=3344&y=1779&z=12",
+        "alt": "",
+        "width": 256,
+        "height": 256
+      },
+      {
+        "src": "https://webapi.amap.com/theme/v1.3/logo@1x.png?v=2",
+        "alt": "",
+        "width": 86,
+        "height": 24
+      }
+    ],
+    "contentSections": [
+      {
+        "tag": "div",
+        "cls": "ny_contant_bg",
+        "textSnippet": "/*联系我们*/\n.ny_font_c_bg{width:100%; margin:0 auto; background:#fff; margin-top:15px;}\n.ny_contant_bg{background: none; padding-bottom:0px !important;}\n.col-md-3s {float:left;width:25%;}\n.contact_address {margin:0 -15px;}\n.contact_address .item {background-color:#f6f6f6;margin:0 15px;margin-bottom: 30px;}\n.contact_address .address_name {font-size:21px;color:#333333;font-family:MicrosoftYaHei;position:relative;padding-left:12px;background-color:#fff;padding-bottom:15px;}\n.contact_address .address_n"
+      }
+    ],
+    "title": "联系我们",
+    "bgImages": [
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/search.png",
+        "cls": "icon"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/close.png",
+        "cls": "close"
+      },
+      {
+        "url": "https://www.zggt-group.com/public/uploads/images/20210618/3caeea790f66811b6a48972704d67ad9.jpg",
+        "cls": "bann"
+      },
+      {
+        "url": "https://a.amap.com/lbs-dev-yuntu/static/web/image/tools/creater/marker.png",
+        "cls": "icon"
+      },
+      {
+        "url": "https://webapi.amap.com/theme/v1.3/map_view.png",
+        "cls": "amap-pancontrol"
+      },
+      {
+        "url": "https://webapi.amap.com/theme/v1.3/map_view.png",
+        "cls": "amap-locate"
+      },
+      {
+        "url": "https://webapi.amap.com/theme/v1.3/map_view.png",
+        "cls": "amap-zoom-plus"
+      },
+      {
+        "url": "https://webapi.amap.com/theme/v1.3/toolbar_rbg.png",
+        "cls": "amap-zoom-ruler"
+      },
+      {
+        "url": "https://webapi.amap.com/theme/v1.3/toolbar_rbg.png",
+        "cls": "amap-zoom-mask"
+      },
+      {
+        "url": "https://webapi.amap.com/theme/v1.3/map_view.png",
+        "cls": "amap-zoom-cursor"
+      },
+      {
+        "url": "https://webapi.amap.com/theme/v1.3/map_view.png",
+        "cls": "amap-zoom-label-street"
+      },
+      {
+        "url": "https://webapi.amap.com/theme/v1.3/map_view.png",
+        "cls": "amap-zoom-label-city"
+      },
+      {
+        "url": "https://webapi.amap.com/theme/v1.3/map_view.png",
+        "cls": "amap-zoom-label-province"
+      },
+      {
+        "url": "https://webapi.amap.com/theme/v1.3/map_view.png",
+        "cls": "amap-zoom-label-country"
+      },
+      {
+        "url": "https://webapi.amap.com/theme/v1.3/map_view.png",
+        "cls": "amap-zoom-minus"
+      },
+      {
+        "url": "https://webapi.amap.com/theme/v1.3/mapcontrols.png",
+        "cls": "amap-overview-button"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/rt_41.png",
+        "cls": "INPUT"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/rt_41.png",
+        "cls": "INPUT"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/rt_41.png",
+        "cls": "last"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/rt_41.png",
+        "cls": "TEXTAREA"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/rightmenu-icon.png",
+        "cls": "r-top"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/rightmenu-icon.png",
+        "cls": "r-phone"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/rightmenu-icon.png",
+        "cls": "r-code"
+      }
+    ]
+  },
+  "191": {
+    "slug": "191",
+    "name": "铜材表面处理",
+    "banner": {
+      "bgImage": "https://www.zggt-group.com/public/uploads/images/20210618/c698b9b3faaf00124f248a1189e208c9.jpg",
+      "h2": "铜材表面处理",
+      "h3": ""
+    },
+    "cateLinks": [
+      {
+        "text": "不锈钢表面处理",
+        "href": "https://www.zggt-group.com/list/190.html"
+      },
+      {
+        "text": "铜材表面处理",
+        "href": "https://www.zggt-group.com/list/191.html"
+      },
+      {
+        "text": "铝材表面处理",
+        "href": "https://www.zggt-group.com/list/192.html"
+      }
+    ],
+    "contentImages": [
+      {
+        "src": "https://www.zggt-group.com/public/uploads/images/20210813/02977b82018d6a4e921d72e932835800.jpg",
+        "alt": "",
+        "width": 440,
+        "height": 260
+      },
+      {
+        "src": "https://www.zggt-group.com/public/uploads/images/20210617/e090a4b55863a738c10ca0234cee4e64.jpg",
+        "alt": "",
+        "width": 440,
+        "height": 260
+      }
+    ],
+    "contentSections": [
+      {
+        "tag": "div",
+        "cls": "inner-page product-list",
+        "textSnippet": "公司产业\n\t\t\t\n\t\t\t\n\t\t\t\n\n\t\t\t\n\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t抛光技术\n\t\t\t\t\t\t\t\t铜化学抛光是一种在铜及其合金表面进行的化学弱腐蚀的过程中达到光亮的抛光工艺。经过化学抛光后铜表面非常光滑光亮，尽显铜本色，甚至可以使铜表面产生镜面反射。铜化学抛光液维护方便、操作安全、无有害气体逸出。\n\t\t\t\t\t\t\t\t查看详情\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t钝化技术\n\t\t\t\t\t\t\t\t铜材工件未经处理极容易氧化变色腐蚀，这是由于铜元素的最外层电子轨道为非饱满的稳定状态，容易失去1、2个电子而被氧化。\n\t\t\t\t\t\t\t\t查看详情"
+      },
+      {
+        "tag": "script",
+        "cls": "",
+        "textSnippet": "$('.search_box .icon').click(function(){\n\t\t$('.ss_big_box').fadeIn(0);\n\t\t$('.ss_box').css('margin-left','0');\n\t})\n\t$('.ss_box .close').click(function(){\n\t\t$('.ss_box').css('margin-left','300px');\n\t\tsetTimeout(function(){\n\t\t\t$('.ss_big_box').fadeOut(0);\n\t\t},300)\n\t})"
+      }
+    ],
+    "title": "铜材表面处理",
+    "bgImages": [
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/search.png",
+        "cls": "icon"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/close.png",
+        "cls": "close"
+      },
+      {
+        "url": "https://www.zggt-group.com/public/uploads/images/20210618/c698b9b3faaf00124f248a1189e208c9.jpg",
+        "cls": "bann"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/rightmenu-icon.png",
+        "cls": "r-top"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/rightmenu-icon.png",
+        "cls": "r-phone"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/rightmenu-icon.png",
+        "cls": "r-code"
+      }
+    ]
+  },
+  "192": {
+    "slug": "192",
+    "name": "铝材表面处理",
+    "banner": {
+      "bgImage": "https://www.zggt-group.com/public/uploads/images/20210618/c698b9b3faaf00124f248a1189e208c9.jpg",
+      "h2": "铝材表面处理",
+      "h3": ""
+    },
+    "cateLinks": [
+      {
+        "text": "不锈钢表面处理",
+        "href": "https://www.zggt-group.com/list/190.html"
+      },
+      {
+        "text": "铜材表面处理",
+        "href": "https://www.zggt-group.com/list/191.html"
+      },
+      {
+        "text": "铝材表面处理",
+        "href": "https://www.zggt-group.com/list/192.html"
+      }
+    ],
+    "contentImages": [
+      {
+        "src": "https://www.zggt-group.com/public/uploads/images/20210813/396f2128edcb1be85f63467a39d2e94f.jpg",
+        "alt": "",
+        "width": 440,
+        "height": 260
+      }
+    ],
+    "contentSections": [
+      {
+        "tag": "div",
+        "cls": "inner-page product-list",
+        "textSnippet": "公司产业\n\t\t\t\n\t\t\t\n\t\t\t\n\n\t\t\t\n\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t钝化技术\n\t\t\t\t\t\t\t\t一般来说，易离子化的金属容易氧化，即容易腐蚀，而事实上并非完全如此，有些金属如铝、镁、铬等虽然易离子化，但由于它们在大气或水中容易生成一层腐蚀产物的薄膜，从而却提高了耐蚀性。通过化学或电化学方法使铝及铝合金属表面状态发生变化，使其溶解速度急剧下降，使耐蚀性提高，此种工艺过程称为铝材钝化处理。\n\t\t\t\t\t\t\t\t查看详情"
+      },
+      {
+        "tag": "script",
+        "cls": "",
+        "textSnippet": "$('.search_box .icon').click(function(){\n\t\t$('.ss_big_box').fadeIn(0);\n\t\t$('.ss_box').css('margin-left','0');\n\t})\n\t$('.ss_box .close').click(function(){\n\t\t$('.ss_box').css('margin-left','300px');\n\t\tsetTimeout(function(){\n\t\t\t$('.ss_big_box').fadeOut(0);\n\t\t},300)\n\t})"
+      }
+    ],
+    "title": "铝材表面处理",
+    "bgImages": [
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/search.png",
+        "cls": "icon"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/close.png",
+        "cls": "close"
+      },
+      {
+        "url": "https://www.zggt-group.com/public/uploads/images/20210618/c698b9b3faaf00124f248a1189e208c9.jpg",
+        "cls": "bann"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/rightmenu-icon.png",
+        "cls": "r-top"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/rightmenu-icon.png",
+        "cls": "r-phone"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/rightmenu-icon.png",
+        "cls": "r-code"
+      }
+    ]
+  },
+  "193": {
+    "slug": "193",
+    "name": "医疗机械",
+    "banner": {
+      "bgImage": "https://www.zggt-group.com/public/uploads/images/20210618/e70a7c23a04c587f03761dc1a48cf62c.jpg",
+      "h2": "医疗机械",
+      "h3": ""
+    },
+    "cateLinks": [
+      {
+        "text": "医疗机械",
+        "href": "https://www.zggt-group.com/list/193.html"
+      },
+      {
+        "text": "家用行业",
+        "href": "https://www.zggt-group.com/list/194.html"
+      },
+      {
+        "text": "食品机械",
+        "href": "https://www.zggt-group.com/list/195.html"
+      },
+      {
+        "text": "核电应用",
+        "href": "https://www.zggt-group.com/list/196.html"
+      },
+      {
+        "text": "刀具应用",
+        "href": "https://www.zggt-group.com/list/197.html"
+      }
+    ],
+    "contentImages": [
+      {
+        "src": "https://www.zggt-group.com/public/uploads/ckeditor/images/20210621/b50b4476f7b58e4634e59a8f87d68b86.jpg",
+        "alt": "",
+        "width": 1360,
+        "height": 370
+      }
+    ],
+    "contentSections": [
+      {
+        "tag": "div",
+        "cls": "youshi-part youshi",
+        "textSnippet": "随着医疗技术的不断进步与发展，医疗器械行业迎来了大发展时期。同时也对医疗器械的无毒环保、防腐性、表面反光颜色等方面提出了更高的要求。凯盟产品在医疗机械行业哑光处理、清洗、抛光、钝化防锈等方面有着非常丰富的应用经验。可满足您不同个性化的表面处理需求。\n\n医疗器械管道内部生锈的处理\n\n我们所熟知的医疗器械，尤其是制药罐、医疗管道在制造完成交付用户使用之前，或者是这些设备运行一段时间以后都需要进行运维处理，由于医疗管道容器的特殊环境的原因，运行一段时间以后在氯离子或者是高温的作用下，容易在管道的内壁产生一些锈蚀物，通常的表象就是流出的水体会略带混浊或者是经过过滤的时候会产生甚至红锈的这种现象，那其实就是我们所理解的锈蚀。这种锈蚀如果采用传统的盐酸或者强酸的工艺尽管能够处理，但是会对设备尤其是医疗器械会带来一定的风险。另外根据我们的经验，由于这些设备通常使用的环境会长期处于120度以上的高温，它所生成的氧化物是非常致密的，即使采用强酸（磷酸、硫酸、盐酸）之类的体系剂进行处理，仍然存在有处理不彻底的这种风险，根据这种问题我们开发了一款中性的除锈清洗剂。这种清洗剂工作的条件是按照一定的比例添加到水"
+      }
+    ],
+    "title": "医疗机械",
+    "bgImages": [
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/search.png",
+        "cls": "icon"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/close.png",
+        "cls": "close"
+      },
+      {
+        "url": "https://www.zggt-group.com/public/uploads/images/20210618/e70a7c23a04c587f03761dc1a48cf62c.jpg",
+        "cls": "bann"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/rightmenu-icon.png",
+        "cls": "r-top"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/rightmenu-icon.png",
+        "cls": "r-phone"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/rightmenu-icon.png",
+        "cls": "r-code"
+      }
+    ]
+  },
+  "194": {
+    "slug": "194",
+    "name": "家用行业",
+    "banner": {
+      "bgImage": "https://www.zggt-group.com/public/uploads/images/20210618/e70a7c23a04c587f03761dc1a48cf62c.jpg",
+      "h2": "家用行业",
+      "h3": ""
+    },
+    "cateLinks": [
+      {
+        "text": "医疗机械",
+        "href": "https://www.zggt-group.com/list/193.html"
+      },
+      {
+        "text": "家用行业",
+        "href": "https://www.zggt-group.com/list/194.html"
+      },
+      {
+        "text": "食品机械",
+        "href": "https://www.zggt-group.com/list/195.html"
+      },
+      {
+        "text": "核电应用",
+        "href": "https://www.zggt-group.com/list/196.html"
+      },
+      {
+        "text": "刀具应用",
+        "href": "https://www.zggt-group.com/list/197.html"
+      }
+    ],
+    "contentImages": [
+      {
+        "src": "https://www.zggt-group.com/public/uploads/ckeditor/images/20210621/5700b04c2ea6b58c10534154f47cb8ef.jpg",
+        "alt": "",
+        "width": 1360,
+        "height": 370
+      }
+    ],
+    "contentSections": [
+      {
+        "tag": "div",
+        "cls": "youshi-part youshi",
+        "textSnippet": "伴随改革开放的不断深入，家用电器已深入千家万户，成为了家庭生活中不可或缺的一部分。各家电企业的发展过程也由当初供不应求转变为了精细化、个性化的服务。“价格、质量”成为白热化的竞争\n\n \n\n如何在降低成本的同时，实现质量的提升？凯盟产品通过在家电行业的应用经验，特别是在铜、铝、不锈钢、不锈铁等材料应用的产品上，拥有丰富化学的抛光、钝化防锈、清洗等成功应用。\n\n替代人工打磨除焊斑的新方法\n\n众所周知，现代家居皆以实用与美观为显著特征，其中金属件在两者的结合之中发挥了极其重要的作用。因此，在家具制造过程中常以结构复杂的金属焊接工艺居多。在焊接过程中，为维持家具的美观效果，常以人工的方式将焊接部位的氧化皮打磨干净再进行后续的处理，从而产生既不高效，也不环保的问题。 针对以上问题，凯盟提供了新型的电化学工艺可解决此问题。该工艺的特征是通过配合一台小巧的不锈钢焊道处理机，再沾上我司特配的焊道处理剂，简单刷在处理表面，即可快速去除焊斑，效果显著，使处理后的焊接部位显露出原有的光泽，既美观又高效。这种工艺已火爆抖音，深受客户喜爱。\n\n提高耐腐蚀力，满足户外不锈钢家具使用要求\n\n户外家具在满足实用性的基"
+      }
+    ],
+    "title": "家用行业",
+    "bgImages": [
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/search.png",
+        "cls": "icon"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/close.png",
+        "cls": "close"
+      },
+      {
+        "url": "https://www.zggt-group.com/public/uploads/images/20210618/e70a7c23a04c587f03761dc1a48cf62c.jpg",
+        "cls": "bann"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/rightmenu-icon.png",
+        "cls": "r-top"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/rightmenu-icon.png",
+        "cls": "r-phone"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/rightmenu-icon.png",
+        "cls": "r-code"
+      }
+    ]
+  },
+  "195": {
+    "slug": "195",
+    "name": "食品机械",
+    "banner": {
+      "bgImage": "https://www.zggt-group.com/public/uploads/images/20210618/e70a7c23a04c587f03761dc1a48cf62c.jpg",
+      "h2": "食品机械",
+      "h3": ""
+    },
+    "cateLinks": [
+      {
+        "text": "医疗机械",
+        "href": "https://www.zggt-group.com/list/193.html"
+      },
+      {
+        "text": "家用行业",
+        "href": "https://www.zggt-group.com/list/194.html"
+      },
+      {
+        "text": "食品机械",
+        "href": "https://www.zggt-group.com/list/195.html"
+      },
+      {
+        "text": "核电应用",
+        "href": "https://www.zggt-group.com/list/196.html"
+      },
+      {
+        "text": "刀具应用",
+        "href": "https://www.zggt-group.com/list/197.html"
+      }
+    ],
+    "contentImages": [
+      {
+        "src": "https://www.zggt-group.com/public/uploads/ckeditor/images/20210624/1bce6742aa1e5277897e9062af73cad2.jpg",
+        "alt": "",
+        "width": 1359,
+        "height": 370
+      }
+    ],
+    "contentSections": [
+      {
+        "tag": "div",
+        "cls": "youshi-part youshi",
+        "textSnippet": "食品安全始终是消费者和食品生产企业永恒关注不变的课题。作为食品生产的食品生产设备：如何实现其安全环保的防锈功能，显得尤为重要，事关食品设备的使用寿命与直接关系所生产食品的安全。\n\n \n\n凯盟针对食品机械设备行业，可量身订制适合的清洗、抛光与钝化防锈等组合工艺。产品安全环保，经处理过的设备零件完全可以达到FDA级食品卫生安全要求。为食品安全，与延长设备的使用寿命保驾护航！\n\n快速去披锋(Burr)，提高表面的光亮度\n\n刀具餐具在成型、开齿或开刃的过程中受到冲压、切削的影响，在零件的断面不但不可避免的会产生披锋（俗称毛刺），而且在加工过程中零件表面受到拉伸、打磨等机械加工影响，金属的表层金相组织亦发生改变，金属的表层金相组织亦发生改变，从而同时引起材料的耐蚀能力急剧降低；这些问题如果通过传统的机械抛光处理，不但效率低下，而且很多死角面临无法处理的境况，耐蚀性能也不能得到有效改善。\n\n抑制\"锰\"元素析出，满足食品级标准要求\n\n在出口型刀餐具的食品级认证中，如何满足意大利、德国对食品餐具中\"锰\"元素析出量的测试，是一个不容小觑的挑战。据了解，为了满足刀具耐磨性的特点，部分刀餐具会选用含锰元素的"
+      }
+    ],
+    "title": "食品机械",
+    "bgImages": [
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/search.png",
+        "cls": "icon"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/close.png",
+        "cls": "close"
+      },
+      {
+        "url": "https://www.zggt-group.com/public/uploads/images/20210618/e70a7c23a04c587f03761dc1a48cf62c.jpg",
+        "cls": "bann"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/rightmenu-icon.png",
+        "cls": "r-top"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/rightmenu-icon.png",
+        "cls": "r-phone"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/rightmenu-icon.png",
+        "cls": "r-code"
+      }
+    ]
+  },
+  "196": {
+    "slug": "196",
+    "name": "核电应用",
+    "banner": {
+      "bgImage": "https://www.zggt-group.com/public/uploads/images/20210618/e70a7c23a04c587f03761dc1a48cf62c.jpg",
+      "h2": "核电应用",
+      "h3": ""
+    },
+    "cateLinks": [
+      {
+        "text": "医疗机械",
+        "href": "https://www.zggt-group.com/list/193.html"
+      },
+      {
+        "text": "家用行业",
+        "href": "https://www.zggt-group.com/list/194.html"
+      },
+      {
+        "text": "食品机械",
+        "href": "https://www.zggt-group.com/list/195.html"
+      },
+      {
+        "text": "核电应用",
+        "href": "https://www.zggt-group.com/list/196.html"
+      },
+      {
+        "text": "刀具应用",
+        "href": "https://www.zggt-group.com/list/197.html"
+      }
+    ],
+    "contentImages": [
+      {
+        "src": "https://www.zggt-group.com/public/uploads/ckeditor/images/20210621/c6785050b0fbd4f86d971044936bca8a.jpg",
+        "alt": "",
+        "width": 1360,
+        "height": 370
+      }
+    ],
+    "contentSections": [
+      {
+        "tag": "div",
+        "cls": "youshi-part youshi",
+        "textSnippet": "核电做为低能、高效、清洁的资源。早已上升至国家战略层面，正面临着前所未有的发展大机遇，也迎来了核电设施高速发展的春天。随着核电技术的不断进步，同时对核电设施的防腐安全也提升至了前所未有的高度。凯盟通过与多家核电力设备厂家的合作，积累了丰富的核电设施表面防腐处理经验，针对核电散热器材、核电燃料棒储存设备等表面防腐处理有着丰富的经验。\n\n快速除氧化皮，在表面生成的银白哑亮的保护层\n\n所有的核电设施因考虑到安全性和时间的耐久性，往往所选用的材料都是耐蚀性较好的316和316L以上的材料，这些材料在制作过程中因为焊接、打磨，不可避免的会产生高温氧化皮以及机械损伤，造成工件表面缺陷。由于核电零件高耐蚀、高安全等可靠性指标的缘故，零部件在正式投入使用前必须把这些安全隐患消除干净，才能确保零部件的安全可靠性，符合使用的要求。\n\n \n\n凯盟拥有超过12年以上的核电设施处理经验，可以为核燃料棒、核电力厂用推车、核反应堆设施、相应的管路提供相应可靠的处理方案，并与国内某知名的核电设施供应商签署40年的合作意向协议。通过本公司技术处理可以有效的清除附着在工件表面的氧化皮以及修复机械损伤所造成的缺陷，并且形成"
+      }
+    ],
+    "title": "核电应用",
+    "bgImages": [
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/search.png",
+        "cls": "icon"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/close.png",
+        "cls": "close"
+      },
+      {
+        "url": "https://www.zggt-group.com/public/uploads/images/20210618/e70a7c23a04c587f03761dc1a48cf62c.jpg",
+        "cls": "bann"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/rightmenu-icon.png",
+        "cls": "r-top"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/rightmenu-icon.png",
+        "cls": "r-phone"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/rightmenu-icon.png",
+        "cls": "r-code"
+      }
+    ]
+  },
+  "197": {
+    "slug": "197",
+    "name": "刀具应用",
+    "banner": {
+      "bgImage": "https://www.zggt-group.com/public/uploads/images/20210618/e70a7c23a04c587f03761dc1a48cf62c.jpg",
+      "h2": "刀具应用",
+      "h3": ""
+    },
+    "cateLinks": [
+      {
+        "text": "医疗机械",
+        "href": "https://www.zggt-group.com/list/193.html"
+      },
+      {
+        "text": "家用行业",
+        "href": "https://www.zggt-group.com/list/194.html"
+      },
+      {
+        "text": "食品机械",
+        "href": "https://www.zggt-group.com/list/195.html"
+      },
+      {
+        "text": "核电应用",
+        "href": "https://www.zggt-group.com/list/196.html"
+      },
+      {
+        "text": "刀具应用",
+        "href": "https://www.zggt-group.com/list/197.html"
+      }
+    ],
+    "contentImages": [
+      {
+        "src": "https://www.zggt-group.com/public/uploads/ckeditor/images/20210621/fd0709dc8f863604c9e89db304826f78.jpg",
+        "alt": "",
+        "width": 1360,
+        "height": 370
+      }
+    ],
+    "contentSections": [
+      {
+        "tag": "div",
+        "cls": "youshi-part youshi",
+        "textSnippet": "随着生活水平的不断提高、消费观念的改变。“高端、智能、安全、环保、耐用”已成为消费者对整体厨卫行业的消费关注重点。特别是“食品安全”已受到消费者和国家层面的高度关注，厨卫企业一方面在适应当前“高人力物力生产成本、高市场竞争”的同时，如何实现“在不提高原生产成本的基础上，达到产品安全、环保、耐用的性能，提高市场竞争能力”已成为当下企业都在思考的问题。\n\n \n\n凯盟凭着多年的厨卫表面处理经验，在不锈钢、不锈铁材料应用的厨卫刀具、拉篮、高压锅类厨具等领域，有着丰富的环保电化学抛光及钝化防锈经验。可为您订制个性化的工艺方案，在不改变原有材料性能的基础上，解决安全、环保、耐用的系列问题。助您达到质量上的腾飞和优异独特的竞争力！\n\n快速去披锋（Burr)，提高表面的光亮度\n\n刀具餐具在成型、开齿或开刃的过程中受到冲压、切削的影响，在零件的断面不但不可避免的会产生披锋（俗称毛刺），而且在加工过程中零件表面受到拉伸、打磨等机械加工影响，金属的表层金相组织亦发生改变，金属的表层金相组织亦发生改变，从而同时引起材料的耐蚀能力急剧降低；这些问题如果通过传统的机械抛光处理，不但效率低下，而且很多死角面临无法处"
+      }
+    ],
+    "title": "刀具应用",
+    "bgImages": [
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/search.png",
+        "cls": "icon"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/close.png",
+        "cls": "close"
+      },
+      {
+        "url": "https://www.zggt-group.com/public/uploads/images/20210618/e70a7c23a04c587f03761dc1a48cf62c.jpg",
+        "cls": "bann"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/rightmenu-icon.png",
+        "cls": "r-top"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/rightmenu-icon.png",
+        "cls": "r-phone"
+      },
+      {
+        "url": "https://www.zggt-group.com/template/default/skin/images/rightmenu-icon.png",
+        "cls": "r-code"
+      }
+    ]
+  }
+}
