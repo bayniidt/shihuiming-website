@@ -73,7 +73,7 @@ export default function ContentSection({ title, text, cards }: ContentSectionPro
         }
       `}</style>
 
-      <div className="w-full bg-[#F7F7F7] h-[200px] flex items-center">
+      <div className="w-full bg-[var(--color-site-light-bg)] h-[200px] flex items-center">
         <div className="w1140">
           <h2
             className="text-[40px] font-bold text-[#212121]"

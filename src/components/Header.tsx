@@ -4,96 +4,107 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { type Locale, localizedPath, siteContent } from "@/lib/site-content";
 
 interface NavItem {
   label: string;
   href: string;
-  internal: boolean;
   children?: { label: string; href: string; internal: boolean }[];
 }
 
-const navItems: NavItem[] = [
-  { label: "网站首页", href: "/", internal: true },
-  {
-    label: "关于光泰",
-    href: "/list/6",
-    internal: true,
-    children: [
+const navChildren = {
+  about: {
+    zh: [
       { label: "公司简介", href: "/list/6#about1", internal: true },
-      { label: "公司愿景", href: "/list/6#about2", internal: true },
-      { label: "发展历程", href: "/list/187", internal: false },
-      { label: "荣誉资质", href: "/list/6#about4", internal: true },
-      { label: "公司风采", href: "/list/189", internal: false },
+      { label: "核心价值", href: "/list/6#about2", internal: true },
+      { label: "企业实景", href: "/list/6#about3", internal: true },
+    ],
+    en: [
+      { label: "Company Profile", href: "/list/6#about1", internal: true },
+      { label: "Core Values", href: "/list/6#about2", internal: true },
+      { label: "Factory Gallery", href: "/list/6#about3", internal: true },
     ],
   },
-  {
-    label: "公司产业",
-    href: "/list/1",
-    internal: true,
-    children: [
-      { label: "不锈钢表面处理", href: "/list/190", internal: false },
-      { label: "铜材表面处理", href: "/list/191", internal: true },
-      { label: "铝材表面处理", href: "/list/192", internal: true },
-    ],
-  },
-  {
-    label: "行业应用",
-    href: "/list/193",
-    internal: true,
-    children: [
-      { label: "医疗机械", href: "/list/193", internal: true },
-      { label: "家用行业", href: "/list/194", internal: true },
+  applications: {
+    zh: [
+      { label: "医疗器械", href: "/list/193", internal: true },
+      { label: "消费电子与家用", href: "/list/194", internal: true },
       { label: "食品机械", href: "/list/195", internal: true },
-      { label: "核电应用", href: "/list/196", internal: true },
-      { label: "刀具应用", href: "/list/197", internal: true },
+      { label: "汽车与新能源", href: "/list/196", internal: true },
+      { label: "精密五金与刀具", href: "/list/197", internal: true },
+    ],
+    en: [
+      { label: "Medical Devices", href: "/list/193", internal: true },
+      { label: "Consumer Electronics", href: "/list/194", internal: true },
+      { label: "Food Machinery", href: "/list/195", internal: true },
+      { label: "Automotive & New Energy", href: "/list/196", internal: true },
+      { label: "Precision Hardware", href: "/list/197", internal: true },
     ],
   },
+} satisfies Record<string, Record<Locale, { label: string; href: string; internal: boolean }[]>>;
 
-  { label: "科技创新", href: "/list/184", internal: true },
-
-  { label: "联系我们", href: "/list/179", internal: true },
-  {
-    label: "语言",
-    href: "#",
-    internal: false,
-    children: [
-      { label: "中文", href: "http://zggt-group.com/", internal: false },
-      { label: "英语", href: "http://en.zggt-group.com/", internal: false },
-    ],
-  },
-];
-
-const navToParentMap: Record<string, string> = {
-  "/list/6": "关于光泰",
-  "/list/1": "公司产业",
-  "/list/190": "公司产业",
-  "/list/191": "公司产业",
-  "/list/192": "公司产业",
-  "/list/193": "行业应用",
-  "/list/194": "行业应用",
-  "/list/195": "行业应用",
-  "/list/196": "行业应用",
-  "/list/197": "行业应用",
-  "/list/184": "科技创新",
-  "/list/179": "联系我们",
-  "/list/11": "新闻资讯",
-  "/list/200": "人力资源",
+const navToParentMap: Record<string, number> = {
+  "/list/6": 1,
+  "/list/1": 2,
+  "/list/191": 2,
+  "/list/192": 2,
+  "/list/193": 3,
+  "/list/194": 3,
+  "/list/195": 3,
+  "/list/196": 3,
+  "/list/197": 3,
+  "/list/184": 0,
+  "/list/179": 5,
 };
 
-function NavLink({ href, internal, children, className, style }: { href: string; internal: boolean; children: React.ReactNode; className?: string; style?: React.CSSProperties }) {
-  if (internal) {
-    return <Link href={href} className={className} style={style}>{children}</Link>;
+function stripLocale(pathname: string) {
+  if (pathname === "/en") {
+    return "/";
   }
-  const externalHref = href.startsWith("http") ? href : `https://www.zggt-group.com${href}.html`;
-  return <a href={externalHref} target={href.startsWith("http") ? "_blank" : undefined} rel={href.startsWith("http") ? "noopener noreferrer" : undefined} className={className} style={style}>{children}</a>;
+  if (pathname.startsWith("/en/")) {
+    return pathname.slice(3);
+  }
+  return pathname;
 }
 
-export default function Header() {
+function NavLink({ href, internal, locale, children, className, style }: { href: string; internal: boolean; locale: Locale; children: React.ReactNode; className?: string; style?: React.CSSProperties }) {
+  if (internal) {
+    return <Link href={localizedPath(href, locale)} className={className} style={style}>{children}</Link>;
+  }
+  return <a href={href} className={className} style={style}>{children}</a>;
+}
+
+export default function Header({ locale = "zh" }: { locale?: Locale }) {
   const [searchOpen, setSearchOpen] = useState(false);
   const [searchClosing, setSearchClosing] = useState(false);
   const pathname = usePathname();
+  const content = siteContent[locale];
 
-  const activeLabel = navToParentMap[pathname] || (pathname === "/" ? "网站首页" : "");
+  const normalPath = stripLocale(pathname);
+  const activeIndex = normalPath.startsWith("/list/products/") ? 2 : navToParentMap[normalPath] ?? (normalPath === "/" ? 0 : -1);
+  const otherLocale: Locale = locale === "zh" ? "en" : "zh";
+  const altPath = normalPath === "/" ? "/list/184" : normalPath;
+  const languageHref = localizedPath(altPath, otherLocale);
+
+  const navItems: NavItem[] = content.nav.map((item, index) => {
+    if (index === 1) {
+      return { ...item, children: navChildren.about[locale] };
+    }
+    if (index === 2) {
+      return {
+        ...item,
+        children: content.products.map((product) => ({
+          label: product.title,
+          href: product.href,
+          internal: true,
+        })),
+      };
+    }
+    if (index === 3) {
+      return { ...item, children: navChildren.applications[locale] };
+    }
+    return item;
+  });
 
   function openSearch() {
     setSearchOpen(true);
@@ -114,8 +125,8 @@ export default function Header() {
       <header className="fixed top-0 left-0 w-full h-[140px] bg-white z-[9999999] transition-all duration-[0.3s] min-w-[1180px]">
         <div className="container-site h-[140px]">
           <div className="float-left mt-[43px] transition-all duration-[0.3s]">
-            <Link href="/">
-              <Image src="/images/logo.png" alt="光泰" width={171} height={57} priority />
+            <Link href={localizedPath("/list/184", locale)} className="block">
+              <Image src={content.brand.logo} alt={content.brand.shortName} width={171} height={92} priority className="h-[57px] w-auto object-contain" />
             </Link>
           </div>
 
@@ -146,27 +157,29 @@ export default function Header() {
 
           <nav className="float-right">
             <ul className="clearfix">
-              {navItems.map((item) => {
-                const isActive = item.label === activeLabel;
+              {navItems.map((item, index) => {
+                const isActive = index === activeIndex;
                 return (
                   <li key={item.label} className="group float-left mx-[15px] h-[140px] leading-[140px] relative transition-all duration-[0.3s]">
                     <NavLink
                       href={item.href}
-                      internal={item.internal}
+                      internal
+                      locale={locale}
                       className="block h-full text-[17px] relative transition-none"
                       style={isActive ? { color: "var(--color-site-orange)" } : undefined}
                     >
                       {item.label}
                     </NavLink>
                     {item.children && item.children.length > 0 && (
-                      <div className="w-[150px] bg-white text-[12px] text-left absolute left-[-35px] top-full h-0 overflow-hidden opacity-0 invisible group-hover:h-auto group-hover:opacity-100 group-hover:visible group-hover:mt-0 shadow-[0_0_16px_-4px_rgba(0,0,0,0.3)] mt-[20px] transition-all duration-[0.3s] z-40">
+                      <div className="w-[220px] bg-white text-[12px] text-left absolute left-[-70px] top-full h-0 overflow-hidden opacity-0 invisible group-hover:h-auto group-hover:opacity-100 group-hover:visible group-hover:mt-0 shadow-[0_0_16px_-4px_rgba(0,0,0,0.3)] mt-[20px] transition-all duration-[0.3s] z-40">
                         <ol className="py-[12px]">
                           {item.children.map((child) => (
                             <li key={child.label} className="w-full m-0">
                               <NavLink
                                 href={child.href}
                                 internal={child.internal}
-                                className="block px-[10px] w-full h-[50px] leading-[50px] text-[#333] text-[14px] text-center hover:text-white transition-all duration-[0.3s] hover:bg-[var(--color-site-orange)]"
+                                locale={locale}
+                                className="flex min-h-[48px] w-full items-center justify-center px-[14px] py-[10px] text-[#333] text-[14px] leading-[20px] text-center hover:text-white transition-all duration-[0.3s] hover:bg-[var(--color-site-orange)]"
                               >
                                 {child.label}
                               </NavLink>
@@ -178,6 +191,11 @@ export default function Header() {
                   </li>
                 );
               })}
+              <li className="float-left mx-[15px] h-[140px] leading-[140px] relative transition-all duration-[0.3s]">
+                <Link href={languageHref} className="block h-full text-[15px] text-[#666] hover:text-[var(--color-site-orange)]">
+                  {content.alternateLocaleName}
+                </Link>
+              </li>
             </ul>
           </nav>
         </div>

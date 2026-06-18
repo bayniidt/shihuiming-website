@@ -1,9 +1,12 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
+import { type Locale, siteContent } from "@/lib/site-content";
 
-export default function RightMenu() {
+export default function RightMenu({ locale = "zh" }: { locale?: Locale }) {
   const [expanded, setExpanded] = useState(false);
+  const content = siteContent[locale];
 
   function scrollToTop() {
     if (typeof window !== "undefined") {
@@ -32,7 +35,7 @@ export default function RightMenu() {
           }}
           onClick={scrollToTop}
         >
-          返回顶部
+          {content.labels.backToTop}
         </li>
         <li
           className="h-[55px] leading-[55px] rounded-[4px] mb-[1px] bg-[var(--color-site-orange)] text-[16px] text-white overflow-hidden"
@@ -44,7 +47,7 @@ export default function RightMenu() {
             fontFamily: "Arial",
           }}
         >
-          0769-8763 3321
+          {content.contact.phone}
         </li>
         <li
           className="leading-[55px] rounded-[4px] mb-[1px] bg-[var(--color-site-orange)] text-[16px] text-white overflow-hidden"
@@ -59,12 +62,14 @@ export default function RightMenu() {
             position: "relative",
           }}
         >
-          微信咨询
+          {content.labels.wechat}
           <div className="w-[117px] mx-auto relative mt-[-10px]">
-            <img
-              src="/images/ewm.jpg"
-              alt="微信咨询"
-              className="block w-[117px] h-[117px]"
+            <Image
+              src={content.brand.logo}
+              alt={content.brand.shortName}
+              width={117}
+              height={117}
+              className="block w-[117px] h-[117px] object-contain bg-white p-[8px]"
             />
           </div>
         </li>
