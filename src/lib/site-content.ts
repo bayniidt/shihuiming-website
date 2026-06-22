@@ -87,6 +87,7 @@ export const siteContent = {
       gallery: "企业实景",
       applications: "行业应用",
       productMatrix: "产品与服务矩阵",
+      mission: "我们的使命",
       coreValues: "核心价值观",
       market: "市场影响力",
       technology: "技术突破",
@@ -95,6 +96,32 @@ export const siteContent = {
       "自2000年创立以来，东莞市世蕙鸣科技有限公司始终锚定先进制造业的底层核心环节，深耕金属表面处理新材料的研发与制造。作为一家集研发、生产、销售、技术服务于一体的高新技术企业，世蕙鸣为全国范围内的金属制品企业提供优质产品和高效服务，推动中国金属制品产业链向高端化、绿色化转型。",
     market:
       "在过去的24年中，世蕙鸣在竞争激烈的表面处理市场中构建了深厚的技术与服务护城河。通过打造“高盐雾、长寿命、环保合规”的标准化产品矩阵，公司已累计服务超过15,000家制造企业，服务网络覆盖长三角、珠三角等核心工业地带。",
+    missions: [
+      {
+        title: "始于2000",
+        text: "世蕙鸣持续深耕金属表面处理领域，以研发、生产、销售和技术服务为一体，服务先进制造关键环节。",
+      },
+      {
+        title: "质量保证",
+        text: "把产品稳定性视为企业生命线，围绕高盐雾、长寿命、环保合规建立标准化产品矩阵。",
+      },
+      {
+        title: "高品质服务",
+        text: "以客户工艺效果为交付目标，提供从产品选型、工艺优化到现场指导的高效服务。",
+      },
+      {
+        title: "稳定生产供应",
+        text: "依托东莞制造基地和成熟供应体系，保障表面处理新材料的稳定量产与及时交付。",
+      },
+      {
+        title: "客户定制",
+        text: "按照不同材质、工件结构和盐雾要求匹配配方方案，帮助客户降低不良率与综合成本。",
+      },
+      {
+        title: "服务全国",
+        text: "服务网络覆盖长三角、珠三角等核心工业地带，以稳定可靠的产品赢得制造企业信任。",
+      },
+    ],
     values: [
       {
         title: "技术立本",
@@ -331,6 +358,7 @@ export const siteContent = {
       gallery: "Factory Gallery",
       applications: "Applications",
       productMatrix: "Product & Service Portfolio",
+      mission: "Our Mission",
       coreValues: "Core Values",
       market: "Market Leadership",
       technology: "Technological Breakthroughs",
@@ -339,6 +367,32 @@ export const siteContent = {
       "Since its establishment in 2000, Dongguan Shihuiming Technology Co., Ltd. has anchored itself in the core links of advanced manufacturing, deeply cultivating the R&D and manufacturing of new materials for metal surface treatment. As a high-tech enterprise integrating R&D, production, sales, and technical services, Shihuiming provides premium products and efficient services for metal product enterprises nationwide.",
     market:
       "Over the past 24 years, Shihuiming has built a deep competitive moat in the surface treatment market. With a standardized product matrix characterized by high salt-spray resistance, long lifespan, and environmental compliance, the company has cumulatively served over 15,000 manufacturing enterprises across key industrial zones.",
+    missions: [
+      {
+        title: "Since 2000",
+        text: "Shihuiming has focused on metal surface treatment, integrating R&D, production, sales, and technical service for advanced manufacturing.",
+      },
+      {
+        title: "Quality Assurance",
+        text: "Product stability is treated as the enterprise lifeline, with standardized systems for corrosion resistance, durability, and compliance.",
+      },
+      {
+        title: "Premium Service",
+        text: "We deliver around customer process results, from product selection and process optimization to on-site technical guidance.",
+      },
+      {
+        title: "Stable Supply",
+        text: "Backed by Dongguan manufacturing and a mature supply system, we support stable production and timely delivery.",
+      },
+      {
+        title: "Customer Customization",
+        text: "Formulas are matched to material, workpiece structure, and salt-spray requirements to reduce defects and total cost.",
+      },
+      {
+        title: "Nationwide Reach",
+        text: "Our service network covers key industrial zones, earning manufacturer trust through reliable products and support.",
+      },
+    ],
     values: [
       {
         title: "Technology as the Foundation",
@@ -530,6 +584,7 @@ export const siteContent = {
   labels: Record<string, string>;
   intro: string;
   market: string;
+  missions: { title: string; text: string }[];
   values: { title: string; text: string }[];
   products: ProductCategory[];
   technology: { title: string; text: string }[];

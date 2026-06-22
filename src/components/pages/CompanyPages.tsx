@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { BadgeCheck, Building2, Factory, Globe2, ShieldCheck, UsersRound, type LucideIcon } from "lucide-react";
 import Banner from "@/components/Banner";
 import { type Locale, type ProductCategory, companyImages, localizedPath, siteContent } from "@/lib/site-content";
 
@@ -51,6 +52,43 @@ function Subnav({
   );
 }
 
+const missionIcons: LucideIcon[] = [Building2, ShieldCheck, BadgeCheck, Factory, UsersRound, Globe2];
+
+function MissionSection({ locale }: { locale: Locale }) {
+  const content = siteContent[locale];
+
+  return (
+    <section id="mission" className="scroll-mt-[170px] bg-white py-[86px] lg:py-[106px]">
+      <div className="contain">
+        <div className="mb-[58px] text-center">
+          <p className="mb-[12px] text-[14px] font-medium uppercase tracking-[4px] text-[var(--color-site-primary)]">
+            {content.brand.slogan}
+          </p>
+          <h2 className="text-[34px] font-bold leading-[1.25] text-[#2b2f2e] md:text-[42px]">{content.labels.mission}</h2>
+        </div>
+        <div className="grid grid-cols-1 gap-x-[56px] gap-y-[58px] sm:grid-cols-2 lg:grid-cols-3">
+          {content.missions.map((item, index) => {
+            const Icon = missionIcons[index] ?? BadgeCheck;
+
+            return (
+              <article
+                key={item.title}
+                className="group flex min-h-[236px] flex-col items-center text-center transition-transform duration-300 hover:-translate-y-[4px]"
+              >
+                <div className="mb-[30px] flex h-[88px] w-[88px] items-center justify-center text-[var(--color-site-primary)] transition-colors duration-300 group-hover:text-[var(--color-site-blue)]">
+                  <Icon strokeWidth={1.8} className="h-[72px] w-[72px]" aria-hidden="true" />
+                </div>
+                <h3 className="mb-[16px] text-[25px] font-bold leading-[1.25] text-[#666] md:text-[27px]">{item.title}</h3>
+                <p className="max-w-[390px] text-[16px] font-semibold leading-[30px] text-[#6b6f6e] text-pretty">{item.text}</p>
+              </article>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export function AboutPage({ locale }: { locale: Locale }) {
   const content = siteContent[locale];
   return (
@@ -60,6 +98,7 @@ export function AboutPage({ locale }: { locale: Locale }) {
         locale={locale}
         links={[
           { text: locale === "zh" ? "公司简介" : "Company Profile", href: "/list/6#about1", cur: true },
+          { text: content.labels.mission, href: "/list/6#mission" },
           { text: content.labels.coreValues, href: "/list/6#about2" },
           { text: content.labels.gallery, href: "/list/6#about3" },
         ]}
@@ -97,6 +136,8 @@ export function AboutPage({ locale }: { locale: Locale }) {
           </div>
         </div>
       </section>
+
+      <MissionSection locale={locale} />
 
       <section id="about2" className="py-[76px] bg-[var(--color-site-light-bg)]">
         <div className="contain">
