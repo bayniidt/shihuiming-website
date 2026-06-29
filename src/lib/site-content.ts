@@ -86,7 +86,7 @@ export const siteContent = {
       { label: "关于世蕙鸣", href: "/list/6" },
       { label: "公司产业", href: "/list/1" },
       { label: "行业应用", href: "/list/193" },
-      { label: "科技创新", href: "/list/184" },
+      { label: "科技创新", href: "/list/6" },
       { label: "联系我们", href: "/list/179" },
     ],
     labels: {
@@ -375,7 +375,7 @@ export const siteContent = {
       { label: "About", href: "/list/6" },
       { label: "Industries", href: "/list/1" },
       { label: "Applications", href: "/list/193" },
-      { label: "Innovation", href: "/list/184" },
+      { label: "Innovation", href: "/list/6" },
       { label: "Contact", href: "/list/179" },
     ],
     labels: {

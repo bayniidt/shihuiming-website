@@ -5,12 +5,13 @@ interface BannerProps {
 }
 
 export default function Banner({ title, subtitle, bgImage }: BannerProps) {
+  const encodedBg = encodeURI(bgImage);
   return (
     <div className="main">
       <div
         className="h-[380px] pt-[160px] text-white flex justify-center"
         style={{
-          backgroundImage: `url(${bgImage})`,
+          backgroundImage: `url('${encodedBg}')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

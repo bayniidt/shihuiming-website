@@ -1,8 +1,8 @@
-import Image from "next/image";
-import Link from "next/link";
-import { BadgeCheck, Building2, Factory, Globe2, ShieldCheck, UsersRound, type LucideIcon } from "lucide-react";
-import Banner from "@/components/Banner";
-import { type Locale, type ProductCategory, companyImages, galleryImages, localizedPath, siteContent } from "@/lib/site-content";
+import Banner from "@/components/Banner"
+import { companyImages, galleryImages, localizedPath, siteContent, type Locale, type ProductCategory } from "@/lib/site-content"
+import { BadgeCheck, Building2, Factory, Globe2, ShieldCheck, UsersRound, type LucideIcon } from "lucide-react"
+import Image from "next/image"
+import Link from "next/link"
 
 function SectionIntro({ title, eyebrow }: { title: string; eyebrow: string }) {
   return (
@@ -32,7 +32,7 @@ function Subnav({
             {links.map((link) => (
               <li key={link.text} className="float-left mr-[25px] text-[18px] relative mb-[12px]">
                 {link.cur && <span className="absolute left-0 top-1/2 -mt-[3px] h-[7px] w-[7px] bg-[var(--color-site-orange)]" />}
-                <a
+                <Link
                   href={localizedPath(link.href, locale)}
                   style={{
                     color: link.cur ? "#333" : "#888",
@@ -42,7 +42,7 @@ function Subnav({
                   }}
                 >
                   {link.text}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -97,10 +97,10 @@ export function AboutPage({ locale }: { locale: Locale }) {
       <Subnav
         locale={locale}
         links={[
-          { text: locale === "zh" ? "公司简介" : "Company Profile", href: "/list/6#about1", cur: true },
-          { text: content.labels.mission, href: "/list/6#mission" },
-          { text: content.labels.coreValues, href: "/list/6#about2" },
-          { text: content.labels.gallery, href: "/list/6#about3" },
+          { text: locale === "zh" ? "公司简介" : "Company Profile", href: "/list/184#about1", cur: true },
+          { text: content.labels.mission, href: "/list/184#mission" },
+          { text: content.labels.coreValues, href: "/list/184#about2" },
+          { text: content.labels.gallery, href: "/list/184#about3" },
         ]}
       />
       <section id="about1" className="py-[80px] bg-white">
@@ -470,7 +470,7 @@ export function ContactPage({ locale }: { locale: Locale }) {
           </div>
         </div>
       </section>
-      <section className="relative min-h-[520px] flex items-center" style={{ background: `linear-gradient(rgba(0,0,0,0.46), rgba(0,0,0,0.5)), url(${companyImages[14]}) center / cover` }}>
+      <section className="relative min-h-[520px] flex items-center" style={{ background: `linear-gradient(rgba(0,0,0,0.46), rgba(0,0,0,0.5)), url('${encodeURI(companyImages[14])}') center / cover` }}>
         <div className="contain text-white">
           <p className="text-[18px] tracking-[4px] uppercase mb-[14px]">{content.brand.slogan}</p>
           <h2 className="text-[42px] font-bold mb-[18px]">{content.brand.name}</h2>
