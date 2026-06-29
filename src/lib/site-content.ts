@@ -9,7 +9,7 @@ export const companyImages = [
   "/shihuiming-website/images/my-images/企业照片/企业厂房 2.jpg",
   "/shihuiming-website/images/my-images/企业照片/企业厂房 3.jpg",
   "/shihuiming-website/images/my-images/企业照片/企业厂房 4.jpg",
-  "/shihuiming-website/images/my-images/企业照片/企业厂房 5.jpg",
+  "/shihuiming-website/images/my-images/企业照片/大门牌.jpg",
   "/shihuiming-website/images/my-images/企业照片/企业厂房 6.jpg",
   "/shihuiming-website/images/my-images/企业照片/企业厂房 7.jpg",
   "/shihuiming-website/images/my-images/企业照片/企业设备 1.jpg",

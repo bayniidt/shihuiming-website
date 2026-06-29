@@ -130,7 +130,7 @@ export default function Header({ locale = "zh" }: { locale?: Locale }) {
           <div className="float-right mt-[61px] relative transition-all duration-[0.3s]">
             <i
               className="block w-[20px] h-[20px] cursor-pointer ml-[40px]"
-              style={{ background: "url(/images/search.png) no-repeat", backgroundSize: "100%" }}
+              style={{ background: "url(/shihuiming-website/images/search.png) no-repeat", backgroundSize: "100%" }}
               onClick={openSearch}
             />
             {searchOpen && (
@@ -143,7 +143,7 @@ export default function Header({ locale = "zh" }: { locale?: Locale }) {
                     <input className="w-[270px] h-[40px] float-left box-border px-[10px] text-[14px] outline-none" name="keywords" type="text" placeholder="请输入" />
                     <i
                       className="h-[40px] w-[30px] float-left cursor-pointer"
-                      style={{ background: "url(/images/close.png) no-repeat", backgroundSize: "25px", backgroundPosition: "center" }}
+                      style={{ background: "url(/shihuiming-website/images/close.png) no-repeat", backgroundSize: "25px", backgroundPosition: "center" }}
                       onClick={closeSearch}
                     />
                   </div>

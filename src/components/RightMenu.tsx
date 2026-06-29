@@ -15,7 +15,7 @@ export default function RightMenu({ locale = "zh" }: { locale?: Locale }) {
   }
 
   const iconSprite = (position: string): React.CSSProperties => ({
-    backgroundImage: "url(/images/rightmenu-icon.png)",
+    backgroundImage: "url(/shihuiming-website/images/rightmenu-icon.png)",
     backgroundRepeat: "no-repeat",
     backgroundPosition: position,
     backgroundSize: "auto",
