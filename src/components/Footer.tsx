@@ -1,5 +1,5 @@
-import Image from "next/image";
-import { type Locale, localizedPath, siteContent } from "@/lib/site-content";
+import { type Locale, localizedPath, siteContent } from "@/lib/site-content"
+import Image from "next/image"
 
 interface FooterColumn {
   title: string;
@@ -75,6 +75,18 @@ export default function Footer({ locale = "zh" }: { locale?: Locale }) {
               ))}
             </div>
 
+            <div className="flex-1 min-w-[280px] mx-[30px]">
+              <p className="text-[#aaa] text-[14px] mb-[10px]">
+                {locale === "zh" ? "公司定位" : "Location"}: {locale === "zh" ? "广东省东莞市寮步镇泉和街2号" : "No.2 Quanhe Street, Liaobu Town, Dongguan, Guangdong"}
+              </p>
+              <iframe
+                title={locale === "zh" ? "公司位置" : "Company Location"}
+                className="border-0 w-full h-[220px]"
+                loading="lazy"
+                src="https://uri.amap.com/marker?position=113.8840,23.0050&name=东莞市世蕙鸣科技有限公司&callnative=1"
+              />
+            </div>
+
             <div className="flex gap-[40px] ml-auto">
               <div className="text-[#aaa] text-[14px] leading-[30px]">
                 <strong className="text-[16px] text-[#ddd] block mb-[10px]">{content.labels.contactUs}</strong>
@@ -85,11 +97,11 @@ export default function Footer({ locale = "zh" }: { locale?: Locale }) {
               <div className="text-center">
                 <p className="text-[#aaa] text-[14px] mb-[10px]">{content.labels.follow}</p>
                 <Image
-                  src={content.brand.logo}
-                  alt={content.brand.shortName}
+                  src="/images/wechat_qrcode.png"
+                  alt={content.labels.wechat}
                   width={120}
-                  height={70}
-                  className="mx-auto w-[120px] h-[70px] object-contain bg-white p-[10px]"
+                  height={120}
+                  className="mx-auto w-[120px] h-[120px] object-contain bg-white p-[6px]"
                 />
               </div>
             </div>

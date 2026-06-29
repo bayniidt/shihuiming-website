@@ -15,30 +15,28 @@ interface NavItem {
 const navChildren = {
   about: {
     zh: [
-      { label: "公司简介", href: "/list/6#about1", internal: true },
-      { label: "核心价值", href: "/list/6#about2", internal: true },
-      { label: "企业实景", href: "/list/6#about3", internal: true },
+      { label: "公司简介", href: "/list/184#about1", internal: true },
+      { label: "核心价值", href: "/list/184#about2", internal: true },
+      { label: "企业实景", href: "/list/184#about3", internal: true },
     ],
     en: [
-      { label: "Company Profile", href: "/list/6#about1", internal: true },
-      { label: "Core Values", href: "/list/6#about2", internal: true },
-      { label: "Factory Gallery", href: "/list/6#about3", internal: true },
+      { label: "Company Profile", href: "/list/184#about1", internal: true },
+      { label: "Core Values", href: "/list/184#about2", internal: true },
+      { label: "Factory Gallery", href: "/list/184#about3", internal: true },
     ],
   },
   applications: {
     zh: [
-      { label: "医疗器械", href: "/list/193", internal: true },
-      { label: "消费电子与家用", href: "/list/194", internal: true },
-      { label: "食品机械", href: "/list/195", internal: true },
-      { label: "汽车与新能源", href: "/list/196", internal: true },
-      { label: "精密五金与刀具", href: "/list/197", internal: true },
+      { label: "家居五金", href: "/list/193", internal: true },
+      { label: "家电制造", href: "/list/194", internal: true },
+      { label: "医疗器械", href: "/list/195", internal: true },
+      { label: "紧固件与精密机加工", href: "/list/196", internal: true },
     ],
     en: [
-      { label: "Medical Devices", href: "/list/193", internal: true },
-      { label: "Consumer Electronics", href: "/list/194", internal: true },
-      { label: "Food Machinery", href: "/list/195", internal: true },
-      { label: "Automotive & New Energy", href: "/list/196", internal: true },
-      { label: "Precision Hardware", href: "/list/197", internal: true },
+      { label: "Home Hardware", href: "/list/193", internal: true },
+      { label: "Home Appliances", href: "/list/194", internal: true },
+      { label: "Medical Devices", href: "/list/195", internal: true },
+      { label: "Fasteners & Machining", href: "/list/196", internal: true },
     ],
   },
 } satisfies Record<string, Record<Locale, { label: string; href: string; internal: boolean }[]>>;
@@ -52,7 +50,6 @@ const navToParentMap: Record<string, number> = {
   "/list/194": 3,
   "/list/195": 3,
   "/list/196": 3,
-  "/list/197": 3,
   "/list/184": 0,
   "/list/179": 5,
 };
@@ -87,7 +84,7 @@ export default function Header({ locale = "zh" }: { locale?: Locale }) {
   const languageHref = localizedPath(altPath, otherLocale);
 
   const navItems: NavItem[] = content.nav.map((item, index) => {
-    if (index === 1) {
+    if (index === 0) {
       return { ...item, children: navChildren.about[locale] };
     }
     if (index === 2) {

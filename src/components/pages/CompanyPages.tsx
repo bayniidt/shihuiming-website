@@ -183,21 +183,38 @@ export function AboutPage({ locale }: { locale: Locale }) {
   );
 }
 
-export function ProductsPage({ locale, focus, productSlug }: { locale: Locale; focus?: "copper" | "aluminum"; productSlug?: string }) {
+function getCategoryBgImage(focus?: string) {
+  return focus === "copper" ? companyImages[11] : focus === "aluminum" ? companyImages[4] : companyImages[0];
+}
+
+export function ProductsPage({ locale, focus, productSlug }: { locale: Locale; focus?: "stainless" | "copper" | "aluminum"; productSlug?: string }) {
   const content = siteContent[locale];
-  const focusSlug = productSlug ?? (focus === "copper" ? "copper-polishing" : focus === "aluminum" ? "aluminum-chromium-free-passivation" : undefined);
-  const focusProduct = focusSlug ? content.products.find((product) => product.slug === focusSlug) : undefined;
-  const products = focusProduct ? [focusProduct] : content.products;
-  const title = focusProduct?.title ?? content.labels.productMatrix;
+  const focusProduct = productSlug ? content.products.find((product) => product.slug === productSlug) : undefined;
+  const products = focusProduct
+    ? [focusProduct]
+    : focus
+      ? content.products.filter((p) => p.category === focus)
+      : content.products;
+  const title = focusProduct?.title ?? (focus ? content.productCategories[focus] : content.labels.productMatrix);
+
+  // Group products by category when showing the full list (not single product view)
+  const groupedProducts = new Map<string, ProductCategory[]>();
+  if (!focusProduct) {
+    for (const product of products) {
+      const group = groupedProducts.get(product.category) || [];
+      group.push(product);
+      groupedProducts.set(product.category, group);
+    }
+  }
 
   return (
     <>
-      <Banner title={title} subtitle={focusProduct?.subtitle ?? content.brand.slogan} bgImage={focus === "copper" ? companyImages[11] : focus === "aluminum" ? companyImages[4] : companyImages[0]} />
+      <Banner title={title} subtitle={focusProduct?.subtitle ?? content.brand.slogan} bgImage={getCategoryBgImage(focus)} />
       <Subnav
         locale={locale}
         links={[
-          { text: content.labels.productMatrix, href: "/list/1", cur: !focusProduct },
-          ...content.products.map((product) => ({
+          { text: content.labels.productMatrix, href: "/list/1", cur: !focusProduct && !focus },
+          ...products.map((product) => ({
             text: product.title,
             href: product.href,
             cur: focusProduct?.slug === product.slug,
@@ -207,18 +224,39 @@ export function ProductsPage({ locale, focus, productSlug }: { locale: Locale; f
       <SectionIntro title={title} eyebrow={content.brand.shortName} />
       <section className="py-[66px] bg-white">
         <div className="contain">
-          <div className="space-y-[30px]">
-            {products.map((product) => (
+          {focusProduct ? (
+            <div className="space-y-[30px]">
               <ProductCategoryCard
-                key={product.slug}
-                product={product}
+                product={focusProduct}
                 locale={locale}
-                index={content.products.findIndex((item) => item.slug === product.slug)}
-                compact={products.length === 1}
-                href={localizedPath(product.href, locale)}
+                index={content.products.findIndex((item) => item.slug === focusProduct.slug)}
+                compact
+                href={localizedPath(focusProduct.href, locale)}
               />
-            ))}
-          </div>
+            </div>
+          ) : (
+            <div className="space-y-[60px]">
+              {Array.from(groupedProducts.entries()).map(([category, categoryProducts]) => (
+                <div key={category}>
+                  <h2 className="text-[32px] font-bold text-[#212121] mb-[30px] pb-[16px] border-b-2 border-[var(--color-site-orange)]">
+                    {content.productCategories[category as "stainless" | "copper" | "aluminum"]}
+                  </h2>
+                  <div className="space-y-[30px]">
+                    {categoryProducts.map((product) => (
+                      <ProductCategoryCard
+                        key={product.slug}
+                        product={product}
+                        locale={locale}
+                        index={content.products.findIndex((item) => item.slug === product.slug)}
+                        compact={categoryProducts.length === 1}
+                        href={localizedPath(product.href, locale)}
+                      />
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
     </>
@@ -377,21 +415,27 @@ export function ApplicationsPage({ locale, slug }: { locale: Locale; slug: strin
       <SectionIntro title={app.title} eyebrow={content.labels.applications} />
       <section className="py-[66px] bg-white">
         <div className="w1140">
-          <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-[42px] items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-[42px] items-start mb-[48px]">
             <Image src={companyImages[(index + 5) % companyImages.length]} alt={app.title} width={960} height={540} className="w-full h-[420px] object-cover" />
             <div>
               <h3 className="text-[28px] font-bold text-[#212121] mb-[18px]">{app.title}</h3>
               <p className="text-[17px] leading-[34px] text-[#555] mb-[24px]">{app.text}</p>
-              <p className="text-[16px] leading-[32px] text-[#666]">{content.intro}</p>
-              <div className="mt-[30px] grid grid-cols-1 sm:grid-cols-2 gap-[18px]">
-                {content.technology.slice(0, 2).map((item) => (
-                  <div key={item.title} className="bg-[var(--color-site-light-bg)] p-[22px]">
-                    <h4 className="text-[18px] font-bold text-[#212121] mb-[8px]">{item.title}</h4>
-                    <p className="text-[14px] leading-[24px] text-[#666]">{item.text}</p>
-                  </div>
-                ))}
-              </div>
             </div>
+          </div>
+          <div className="space-y-[40px]">
+            {app.details.map((detail, i) => (
+              <div key={i} className="bg-[var(--color-site-light-bg)] p-[32px]">
+                {detail.heading && (
+                  <h4 className="text-[22px] font-bold text-[var(--color-site-orange)] mb-[16px] flex items-center gap-[12px]">
+                    <span className="inline-flex items-center justify-center w-[32px] h-[32px] bg-[var(--color-site-primary)] text-white text-[14px] font-bold rounded-full shrink-0">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    {detail.heading}
+                  </h4>
+                )}
+                <p className="text-[16px] leading-[32px] text-[#555]">{detail.body}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

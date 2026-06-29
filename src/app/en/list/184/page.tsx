@@ -1,5 +1,5 @@
-import { InnovationPage } from "@/components/pages/CompanyPages";
+import { AboutPage } from "@/components/pages/CompanyPages";
 
 export default function Page184En() {
-  return <InnovationPage locale="en" />;
+  return <AboutPage locale="en" />;
 }
