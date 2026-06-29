@@ -79,12 +79,15 @@ export default function Footer({ locale = "zh" }: { locale?: Locale }) {
               <p className="text-[#aaa] text-[14px] mb-[10px]">
                 {locale === "zh" ? "公司定位" : "Location"}: {locale === "zh" ? "广东省东莞市寮步镇泉和街2号" : "No.2 Quanhe Street, Liaobu Town, Dongguan, Guangdong"}
               </p>
-              <iframe
-                title={locale === "zh" ? "公司位置" : "Company Location"}
-                className="border-0 w-full h-[220px]"
-                loading="lazy"
-                src="https://uri.amap.com/marker?position=113.8840,23.0050&name=东莞市世蕙鸣科技有限公司&callnative=1"
-              />
+              <div className="w-full h-[220px] overflow-hidden rounded-[4px]">
+                <iframe
+                  title={locale === "zh" ? "公司位置" : "Company Location"}
+                  className="border-0 w-full"
+                  style={{ height: "300px", marginTop: "-60px" }}
+                  loading="lazy"
+                  src="https://uri.amap.com/marker?position=113.8840,23.0050&name=东莞市世蕙鸣科技有限公司&callnative=1"
+                />
+              </div>
             </div>
 
             <div className="flex gap-[40px] ml-auto">

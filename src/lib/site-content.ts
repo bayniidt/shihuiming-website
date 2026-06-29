@@ -3,21 +3,35 @@ export type Locale = "zh" | "en";
 export const defaultLocale: Locale = "zh";
 
 export const companyImages = [
-  "/shihuiming-website/images/my-images/web/IMG_5845.jpg",
-  "/shihuiming-website/images/my-images/web/IMG_5846.jpg",
-  "/shihuiming-website/images/my-images/web/IMG_5847.jpg",
-  "/shihuiming-website/images/my-images/web/IMG_5848.jpg",
-  "/shihuiming-website/images/my-images/web/IMG_5849.jpg",
-  "/shihuiming-website/images/my-images/web/IMG_5850.jpg",
-  "/shihuiming-website/images/my-images/web/IMG_5851.jpg",
-  "/shihuiming-website/images/my-images/web/IMG_5852.jpg",
-  "/shihuiming-website/images/my-images/web/IMG_5853.jpg",
-  "/shihuiming-website/images/my-images/web/IMG_5898.jpg",
-  "/shihuiming-website/images/my-images/web/IMG_5899.jpg",
-  "/shihuiming-website/images/my-images/web/IMG_5900.jpg",
-  "/shihuiming-website/images/my-images/web/IMG_5901.jpg",
-  "/shihuiming-website/images/my-images/web/IMG_5902.jpg",
-  "/shihuiming-website/images/my-images/web/IMG_5903.jpg",
+  "/shihuiming-website/images/my-images/企业照片/大门牌.jpg",
+  "/shihuiming-website/images/my-images/企业照片/企业大楼.jpg",
+  "/shihuiming-website/images/my-images/企业照片/企业厂房.jpg",
+  "/shihuiming-website/images/my-images/企业照片/企业厂房 2.jpg",
+  "/shihuiming-website/images/my-images/企业照片/企业厂房 3.jpg",
+  "/shihuiming-website/images/my-images/企业照片/企业厂房 4.jpg",
+  "/shihuiming-website/images/my-images/企业照片/企业厂房 5.jpg",
+  "/shihuiming-website/images/my-images/企业照片/企业厂房 6.jpg",
+  "/shihuiming-website/images/my-images/企业照片/企业厂房 7.jpg",
+  "/shihuiming-website/images/my-images/企业照片/企业设备 1.jpg",
+  "/shihuiming-website/images/my-images/企业照片/企业设备 2.jpg",
+  "/shihuiming-website/images/my-images/企业照片/大门牌.jpg",
+  "/shihuiming-website/images/my-images/企业照片/企业大楼.jpg",
+  "/shihuiming-website/images/my-images/企业照片/企业厂房.jpg",
+  "/shihuiming-website/images/my-images/企业照片/企业厂房 2.jpg",
+] as const;
+
+export const galleryImages = [
+  "/shihuiming-website/images/my-images/企业照片/大门牌.jpg",
+  "/shihuiming-website/images/my-images/企业照片/企业大楼.jpg",
+  "/shihuiming-website/images/my-images/企业照片/企业厂房.jpg",
+  "/shihuiming-website/images/my-images/企业照片/企业厂房 2.jpg",
+  "/shihuiming-website/images/my-images/企业照片/企业厂房 3.jpg",
+  "/shihuiming-website/images/my-images/企业照片/企业厂房 4.jpg",
+  "/shihuiming-website/images/my-images/企业照片/企业厂房 5.jpg",
+  "/shihuiming-website/images/my-images/企业照片/企业厂房 6.jpg",
+  "/shihuiming-website/images/my-images/企业照片/企业厂房 7.jpg",
+  "/shihuiming-website/images/my-images/企业照片/企业设备 1.jpg",
+  "/shihuiming-website/images/my-images/企业照片/企业设备 2.jpg",
 ] as const;
 
 export interface ProductCategory {

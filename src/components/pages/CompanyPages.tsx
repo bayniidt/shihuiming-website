@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { BadgeCheck, Building2, Factory, Globe2, ShieldCheck, UsersRound, type LucideIcon } from "lucide-react";
 import Banner from "@/components/Banner";
-import { type Locale, type ProductCategory, companyImages, localizedPath, siteContent } from "@/lib/site-content";
+import { type Locale, type ProductCategory, companyImages, galleryImages, localizedPath, siteContent } from "@/lib/site-content";
 
 function SectionIntro({ title, eyebrow }: { title: string; eyebrow: string }) {
   return (
@@ -165,15 +165,15 @@ export function AboutPage({ locale }: { locale: Locale }) {
               <p className="text-[16px] text-[#666]">{content.market}</p>
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-[18px]">
-            {companyImages.map((image, index) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[18px]">
+            {galleryImages.map((image, index) => (
               <Image
                 key={image}
                 src={image}
                 alt={`${content.labels.gallery} ${index + 1}`}
-                width={960}
-                height={540}
-                className={`w-full object-cover ${index % 5 === 0 ? "md:col-span-2 h-[360px]" : "h-[260px]"}`}
+                width={640}
+                height={480}
+                className="w-full h-[260px] object-cover"
               />
             ))}
           </div>
