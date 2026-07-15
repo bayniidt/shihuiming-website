@@ -1,4 +1,4 @@
-import { type Locale, localizedPath, siteContent } from "@/lib/site-content"
+import { productCategoryPath, type Locale, localizedPath, siteContent } from "@/lib/site-content"
 import Image from "next/image"
 
 interface FooterColumn {
@@ -22,9 +22,9 @@ function getFooterColumns(locale: Locale): FooterColumn[] {
     {
       title: content.nav[2].label,
       href: "/list/1",
-      children: content.products.map((product) => ({
-        label: product.title,
-        href: product.href,
+      children: (["stainless", "copper", "aluminum"] as const).map((category) => ({
+        label: content.productCategories[category],
+        href: productCategoryPath(category),
       })),
     },
     {
@@ -80,12 +80,12 @@ export default function Footer({ locale = "zh" }: { locale?: Locale }) {
                 {locale === "zh" ? "公司定位" : "Location"}: {locale === "zh" ? "广东省东莞市寮步镇泉和街2号" : "No.2 Quanhe Street, Liaobu Town, Dongguan, Guangdong"}
               </p>
               <div className="w-full h-[220px] overflow-hidden rounded-[4px]">
-                <iframe
-                  title={locale === "zh" ? "公司位置" : "Company Location"}
-                  className="border-0 w-full"
-                  style={{ height: "300px", marginTop: "-60px" }}
-                  loading="lazy"
-                  src="https://uri.amap.com/marker?position=113.8840,23.0050&name=东莞市世蕙鸣科技有限公司&callnative=1"
+                <Image
+                  src="/shihuiming-website/images/my-images/地图定位.png"
+                  alt={locale === "zh" ? "公司位置" : "Company Location"}
+                  width={1200}
+                  height={660}
+                  className="h-full w-full object-cover"
                 />
               </div>
             </div>
@@ -100,7 +100,7 @@ export default function Footer({ locale = "zh" }: { locale?: Locale }) {
               <div className="text-center">
                 <p className="text-[#aaa] text-[14px] mb-[10px]">{content.labels.follow}</p>
                 <Image
-                  src="/images/wechat_qrcode.png"
+                  src="/shihuiming-website/images/wechat_qrcode.png"
                   alt={content.labels.wechat}
                   width={120}
                   height={120}

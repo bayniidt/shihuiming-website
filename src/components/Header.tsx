@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { type Locale, localizedPath, siteContent } from "@/lib/site-content";
+import { productCategoryPath, type Locale, localizedPath, siteContent } from "@/lib/site-content";
 
 interface NavItem {
   label: string;
@@ -44,6 +44,7 @@ const navChildren = {
 const navToParentMap: Record<string, number> = {
   "/list/6": 1,
   "/list/1": 2,
+  "/list/190": 2,
   "/list/191": 2,
   "/list/192": 2,
   "/list/193": 3,
@@ -90,9 +91,9 @@ export default function Header({ locale = "zh" }: { locale?: Locale }) {
     if (index === 2) {
       return {
         ...item,
-        children: content.products.map((product) => ({
-          label: product.title,
-          href: product.href,
+        children: (["stainless", "copper", "aluminum"] as const).map((category) => ({
+          label: content.productCategories[category],
+          href: productCategoryPath(category),
           internal: true,
         })),
       };

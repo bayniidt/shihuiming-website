@@ -1,5 +1,5 @@
 import Banner from "@/components/Banner"
-import { companyImages, galleryImages, localizedPath, siteContent, type Locale, type ProductCategory } from "@/lib/site-content"
+import { companyImages, galleryImages, localizedPath, productCategoryPath, siteContent, type Locale, type ProductCategory } from "@/lib/site-content"
 import { BadgeCheck, Building2, Factory, Globe2, ShieldCheck, UsersRound, type LucideIcon } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
@@ -122,13 +122,13 @@ export function AboutPage({ locale }: { locale: Locale }) {
               </div>
             </div>
             <div className="grid grid-cols-2 gap-[14px]">
-              {[companyImages[6], companyImages[7], companyImages[0], companyImages[12]].map((image, index) => (
+              {[companyImages[12]].map((image, index) => (
                 <Image
                   key={image}
                   src={image}
                   alt={`${content.brand.shortName} ${index + 1}`}
                   width={960}
-                  height={540}
+                  height={600}
                   className={`w-full object-cover ${index === 0 ? "col-span-2 h-[280px]" : "h-[180px]"}`}
                 />
               ))}
@@ -190,6 +190,7 @@ function getCategoryBgImage(focus?: string) {
 export function ProductsPage({ locale, focus, productSlug }: { locale: Locale; focus?: "stainless" | "copper" | "aluminum"; productSlug?: string }) {
   const content = siteContent[locale];
   const focusProduct = productSlug ? content.products.find((product) => product.slug === productSlug) : undefined;
+  const isCategoryLanding = Boolean(focus && !focusProduct);
   const products = focusProduct
     ? [focusProduct]
     : focus
@@ -214,10 +215,10 @@ export function ProductsPage({ locale, focus, productSlug }: { locale: Locale; f
         locale={locale}
         links={[
           { text: content.labels.productMatrix, href: "/list/1", cur: !focusProduct && !focus },
-          ...products.map((product) => ({
-            text: product.title,
-            href: product.href,
-            cur: focusProduct?.slug === product.slug,
+          ...(["stainless", "copper", "aluminum"] as const).map((category) => ({
+            text: content.productCategories[category],
+            href: productCategoryPath(category),
+            cur: !focusProduct && focus === category,
           })),
         ]}
       />
@@ -233,6 +234,17 @@ export function ProductsPage({ locale, focus, productSlug }: { locale: Locale; f
                 compact
                 href={localizedPath(focusProduct.href, locale)}
               />
+            </div>
+          ) : isCategoryLanding ? (
+            <div className="grid grid-cols-1 gap-[26px] md:grid-cols-2 xl:grid-cols-3">
+              {products.map((product) => (
+                <CategoryLandingCard
+                  key={product.slug}
+                  product={product}
+                  locale={locale}
+                  href={localizedPath(product.href, locale)}
+                />
+              ))}
             </div>
           ) : (
             <div className="space-y-[60px]">
@@ -260,6 +272,40 @@ export function ProductsPage({ locale, focus, productSlug }: { locale: Locale; f
         </div>
       </section>
     </>
+  );
+}
+
+function CategoryLandingCard({
+  product,
+  locale,
+  href,
+}: {
+  product: ProductCategory;
+  locale: Locale;
+  href: string;
+}) {
+  return (
+    <Link
+      href={href}
+      className="group overflow-hidden border border-[#edf1ef] bg-white shadow-[0_14px_34px_rgba(0,0,0,0.05)] transition-all duration-[0.3s] hover:-translate-y-[4px] hover:shadow-[0_22px_40px_rgba(0,0,0,0.1)]"
+    >
+      <div className="overflow-hidden bg-[#f5f8f7]">
+        <Image
+          src={product.images[0] ?? companyImages[0]}
+          alt={product.title}
+          width={960}
+          height={640}
+          className="h-[220px] w-full object-cover transition-transform duration-[0.5s] group-hover:scale-105"
+        />
+      </div>
+      <div className="p-[22px]">
+        <h3 className="mb-[12px] text-[22px] font-bold leading-[1.3] text-[#212121]">{product.title}</h3>
+        <p className="mb-[16px] line-clamp-3 text-[15px] leading-[28px] text-[#6a706d]">{product.desc}</p>
+        <span className="inline-flex items-center text-[14px] font-medium text-[var(--color-site-primary)] transition-colors duration-[0.3s] group-hover:text-[var(--color-site-blue)]">
+          {locale === "zh" ? "查看详情" : "View details"}
+        </span>
+      </div>
+    </Link>
   );
 }
 
@@ -374,10 +420,10 @@ export function InnovationPage({ locale }: { locale: Locale }) {
   return (
     <>
       <Banner title={content.nav[4].label} subtitle={content.brand.slogan} bgImage={companyImages[9]} />
-      <SectionIntro title={content.brand.tagline} eyebrow={content.labels.technology} />
+      <SectionIntro title={content.innovationHeadline} eyebrow={content.labels.technology} />
       <section className="py-[66px] bg-white">
         <div className="w1140">
-          <p className="text-[16px] text-[#212121] leading-[32px] mb-[36px]">{content.market}</p>
+          <p className="text-[16px] text-[#212121] leading-[32px] mb-[36px]">{content.innovationIntro}</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-[30px]">
             {content.technology.map((item, index) => (
               <article key={item.title} className="group">
@@ -386,7 +432,7 @@ export function InnovationPage({ locale }: { locale: Locale }) {
                 </div>
                 <div className="pt-[18px] pb-[24px]">
                   <h3 className="text-[22px] font-bold text-[#212121] mb-[10px]">{item.title}</h3>
-                  <p className="text-[15px] leading-[28px] text-[#666]">{item.text}</p>
+                  <p className="whitespace-pre-line text-[15px] leading-[28px] text-[#666]">{item.text}</p>
                 </div>
               </article>
             ))}
@@ -397,13 +443,20 @@ export function InnovationPage({ locale }: { locale: Locale }) {
   );
 }
 
+const applicationImages = {
+  "193": "/shihuiming-website/images/my-images/行业运用/家居五金.png",
+  "194": "/shihuiming-website/images/my-images/行业运用/家电制造.png",
+  "195": "/shihuiming-website/images/my-images/行业运用/医疗器械.png",
+  "196": "/shihuiming-website/images/my-images/行业运用/紧固件.png",
+} as const;
+
 export function ApplicationsPage({ locale, slug }: { locale: Locale; slug: string }) {
   const content = siteContent[locale];
   const app = content.applications.find((item) => item.slug === slug) ?? content.applications[0];
-  const index = content.applications.findIndex((item) => item.slug === app.slug);
+  const appImage = applicationImages[app.slug as keyof typeof applicationImages] ?? companyImages[0];
   return (
     <>
-      <Banner title={app.title} subtitle={content.labels.applications} bgImage={companyImages[(index + 3) % companyImages.length]} />
+      <Banner title={app.title} subtitle={content.labels.applications} bgImage={appImage} />
       <Subnav
         locale={locale}
         links={content.applications.map((item) => ({
@@ -416,7 +469,7 @@ export function ApplicationsPage({ locale, slug }: { locale: Locale; slug: strin
       <section className="py-[66px] bg-white">
         <div className="w1140">
           <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-[42px] items-start mb-[48px]">
-            <Image src={companyImages[(index + 5) % companyImages.length]} alt={app.title} width={960} height={540} className="w-full h-[420px] object-cover" />
+            <Image src={appImage} alt={app.title} width={960} height={540} className="w-full h-[420px] object-cover" />
             <div>
               <h3 className="text-[28px] font-bold text-[#212121] mb-[18px]">{app.title}</h3>
               <p className="text-[17px] leading-[34px] text-[#555] mb-[24px]">{app.text}</p>

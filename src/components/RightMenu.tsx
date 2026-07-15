@@ -76,7 +76,7 @@ export default function RightMenu({ locale = "zh" }: { locale?: Locale }) {
           </div>
           <div className="w-[117px] mx-auto mt-[-5px]">
             <Image
-              src="/images/wechat_qrcode.png"
+              src="/shihuiming-website/images/wechat_qrcode.png"
               alt={content.labels.wechat}
               width={117}
               height={117}
