@@ -78,16 +78,13 @@ export default function Footer({ locale = "zh" }: { locale?: Locale }) {
             </div>
 
             <div className="flex-1 min-w-[280px] mx-[30px]">
-              <p className="text-[#aaa] text-[14px] mb-[10px]">
-                {locale === "zh" ? "公司定位" : "Location"}: {locale === "zh" ? "广东省东莞市寮步镇泉和街2号" : "No.2 Quanhe Street, Liaobu Town, Dongguan, Guangdong"}
-              </p>
-              <div className="w-full h-[220px] overflow-hidden rounded-[4px]">
-                <Image
-                  src="/shihuiming-website/images/my-images/地图定位.png"
-                  alt={locale === "zh" ? "公司位置" : "Company Location"}
-                  width={1200}
-                  height={660}
-                  className="h-full w-full object-cover"
+              <div className="h-[220px] w-full overflow-hidden rounded-[4px] border border-white/10">
+                <iframe
+                  src="https://www.openstreetmap.org/export/embed.html?bbox=113.86687%2C22.9811%2C113.87687%2C22.9911&layer=mapnik&marker=22.9861%2C113.87187"
+                  title={locale === "zh" ? "东莞市世蕙鸣科技有限公司位置" : "Shihuiming Technology location"}
+                  className="h-[calc(100%+42px)] w-[calc(100%+58px)]"
+                  loading="lazy"
+                  referrerPolicy="no-referrer"
                 />
               </div>
             </div>

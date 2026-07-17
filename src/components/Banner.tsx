@@ -2,35 +2,34 @@ interface BannerProps {
   title: string;
   subtitle?: string;
   bgImage: string;
+  offsetRight?: boolean;
 }
 
-export default function Banner({ title, subtitle, bgImage }: BannerProps) {
+export default function Banner({ title, subtitle, bgImage, offsetRight = false }: BannerProps) {
   const encodedBg = encodeURI(bgImage);
   return (
     <div className="main">
       <div
-        className="h-[380px] pt-[160px] text-white flex justify-center"
+        className="flex h-[380px] items-center justify-center"
         style={{
           backgroundImage: `url('${encodedBg}')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
-        <div className="contain">
-          <h2
-            className="text-[42px] text-center font-normal mb-[10px] text-white"
-            style={{ fontFamily: 'Arial, "Microsoft YaHei"' }}
+        <div className="contain text-left">
+          <div
+            className={`banner-copy w-fit max-w-[850px] border-l-[5px] border-[var(--color-site-primary)] bg-white/90 px-[34px] py-[24px] backdrop-blur-[2px] ${offsetRight ? "ml-[70%]" : ""}`}
           >
-            {title}
-          </h2>
-          {subtitle && (
-            <h3
-              className="text-[24px] font-light text-center uppercase text-white"
-              style={{ fontFamily: '"Microsoft yahei"' }}
-            >
-              {subtitle}
-            </h3>
-          )}
+            <h2 className="mb-[12px] text-[40px] font-bold leading-[1.2] tracking-[2px] text-[#173b35] md:text-[54px]">
+              {title}
+            </h2>
+            {subtitle && (
+              <h3 className="text-[22px] font-semibold leading-[1.4] tracking-[3px] text-[#315f56] md:text-[28px]">
+                {subtitle}
+              </h3>
+            )}
+          </div>
         </div>
       </div>
     </div>

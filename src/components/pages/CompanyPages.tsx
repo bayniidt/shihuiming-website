@@ -93,7 +93,7 @@ export function AboutPage({ locale }: { locale: Locale }) {
   const content = siteContent[locale];
   return (
     <>
-      <Banner title={content.nav[0].label} subtitle={content.brand.slogan} bgImage={companyImages[6]} />
+      <Banner title={content.nav[0].label} subtitle={content.brand.slogan} bgImage={companyImages[6]} offsetRight />
       <Subnav
         locale={locale}
         links={[
@@ -185,12 +185,19 @@ export function AboutPage({ locale }: { locale: Locale }) {
 }
 
 function getCategoryBgImage(focus?: string) {
-  return focus === "copper" ? companyImages[11] : focus === "aluminum" ? companyImages[4] : companyImages[0];
+  if (focus === "copper") {
+    return "/shihuiming-website/images/my-images/网站修改3/公司产业-铜材清洗.webp";
+  }
+  if (focus === "aluminum") {
+    return "/shihuiming-website/images/my-images/网站修改3/公司产业-铝材清洗.webp";
+  }
+  return "/shihuiming-website/images/my-images/网站修改3/dc54564e9258d109b0f637e9af4bb5b06c814d72.webp";
 }
 
 export function ProductsPage({ locale, focus, productSlug }: { locale: Locale; focus?: "stainless" | "copper" | "aluminum"; productSlug?: string }) {
   const content = siteContent[locale];
   const focusProduct = productSlug ? content.products.find((product) => product.slug === productSlug) : undefined;
+  const bannerFocus = focus ?? focusProduct?.category;
   const isCategoryLanding = Boolean(focus && !focusProduct);
   const products = focusProduct
     ? [focusProduct]
@@ -211,7 +218,7 @@ export function ProductsPage({ locale, focus, productSlug }: { locale: Locale; f
 
   return (
     <>
-      <Banner title={title} subtitle={focusProduct?.subtitle ?? content.brand.slogan} bgImage={getCategoryBgImage(focus)} />
+      <Banner title={title} subtitle={focusProduct?.subtitle ?? content.brand.slogan} bgImage={getCategoryBgImage(bannerFocus)} />
       <Subnav
         locale={locale}
         links={(["stainless", "copper", "aluminum"] as const).map((category) => ({

@@ -172,6 +172,10 @@ a:hover {
   color: var(--color-site-primary);
 }
 
+.banner-copy {
+  font-family: "STZhongsong", "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", serif;
+}
+
 .container-site {
   width: 100%;
   max-width: 1720px;
