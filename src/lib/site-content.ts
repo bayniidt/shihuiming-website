@@ -87,11 +87,10 @@ export const siteContent = {
         "为全国金属制品企业提供优质产品和高效服务，持续钻研金属表面处理技术，努力向国际先进水平看齐。",
     },
     nav: [
-      { label: "网站首页", href: "/list/184" },
       { label: "关于世蕙鸣", href: "/list/6" },
-      { label: "公司产业", href: "/list/1" },
-      { label: "行业应用", href: "/list/193" },
-      { label: "科技创新", href: "/list/6" },
+      { label: "公司产业", href: "/list/190" },
+      { label: "行业应用", href: "/list/194" },
+      { label: "科技创新", href: "/list/184" },
       { label: "联系我们", href: "/list/179" },
     ],
     labels: {
@@ -179,7 +178,7 @@ export const siteContent = {
         applications: "不锈钢冲压件、焊接件、精密五金件的前处理清洗。",
         standards: "符合欧盟RoHS、REACH环保标准。",
         images: [
-          "/shihuiming-website/images/my-images/web/IMG_5900.jpg",
+          "/shihuiming-website/images/my-images/网站修改3/公司产业-不锈钢除油.jpeg",
           "/shihuiming-website/images/my-images/web/IMG_5903.jpg",
           "/shihuiming-website/images/my-images/web/IMG_5850.jpg",
         ],
@@ -195,7 +194,7 @@ export const siteContent = {
         applications: "食品机械、医疗器械、卫浴五金、户外不锈钢制品。",
         standards: "符合欧盟RoHS、REACH环保标准，通过SGS无毒检测。",
         images: [
-          "/shihuiming-website/images/my-images/web/IMG_5851.jpg",
+          "/shihuiming-website/images/my-images/网站修改3/公司产业-不锈钢钝化.jpeg",
           "/shihuiming-website/images/my-images/web/IMG_5852.jpg",
           "/shihuiming-website/images/my-images/web/IMG_5898.jpg",
         ],
@@ -210,7 +209,7 @@ export const siteContent = {
         details: ["镜面级光洁度：大幅降低表面粗糙度（Ra值），呈现均匀一致的镜面光泽或亚光质感。表面缺陷被去除，抗点蚀与缝隙腐蚀能力显著增强。", "无死角处理：完美解决复杂异型件、内孔、盲孔及精密细螺纹等机械抛光无法触及的技术死角。"],
         applications: "医药与半导体管道、高端餐具、精密弹簧、汽车金属饰条。",
         images: [
-          "/shihuiming-website/images/my-images/web/IMG_5899.jpg",
+          "/shihuiming-website/images/my-images/网站修改3/公司产业-不锈钢电解抛光.jpeg",
           "/shihuiming-website/images/my-images/web/IMG_5901.jpg",
           "/shihuiming-website/images/my-images/web/IMG_5902.jpg",
         ],
@@ -225,7 +224,7 @@ export const siteContent = {
         details: ["清洗后铜材恢复鲜亮本色，表面无残留、润湿性好，可无缝衔接后续电镀、焊接或钝化工序。"],
         applications: "电子接插件、铜管、铜艺装饰件、精密铜制零件。",
         images: [
-          "/shihuiming-website/images/my-images/企业照片/企业设备 1.jpg",
+          "/shihuiming-website/images/my-images/网站修改3/公司产业-铜材清洗.webp",
           "/shihuiming-website/images/my-images/企业照片/企业设备 2.jpg",
           "/shihuiming-website/images/my-images/企业照片/企业厂房 6.jpg",
         ],
@@ -240,7 +239,7 @@ export const siteContent = {
         details: ["出光迅速：极速恢复铜件原生金属光泽，色泽均匀亮丽。", "环保无重金属：彻底摒弃传统配方中的铬酸、硝酸等高污染成分，废水处理简单合规。"],
         applications: "铜标牌、铜制五金卫浴、铜工艺品、电子散热模组。",
         images: [
-          "/shihuiming-website/images/my-images/企业照片/企业厂房 7.jpg",
+          "/shihuiming-website/images/my-images/网站修改3/公司产业-铜材抛光.webp",
           "/shihuiming-website/images/my-images/企业照片/企业厂房 5.jpg",
           "/shihuiming-website/images/my-images/企业照片/企业大楼.jpg",
         ],
@@ -255,7 +254,7 @@ export const siteContent = {
         details: ["长效抗氧：经该钝化处理后，铜材的抗变色周期可延长数倍乃至十数倍，同时保持基材良好的导电性、导热性和可焊性。膜层不影响焊接与后续装配，是解决铜件氧化发黑、保证长期外观与功能稳定性的长效方案。"],
         applications: "电子接插件、铜排、铜制艺术品、卫浴五金。",
         images: [
-          "/shihuiming-website/images/my-images/企业照片/企业厂房 4.jpg",
+          "/shihuiming-website/images/my-images/网站修改3/公司产业-铜材钝化.jpg",
           "/shihuiming-website/images/my-images/企业照片/企业厂房 3.jpg",
           "/shihuiming-website/images/my-images/企业照片/企业厂房 2.jpg",
         ],
@@ -270,7 +269,7 @@ export const siteContent = {
         details: [`处理过程中不产生酸雾抑制性残留，不腐蚀基体，彻底解决压铸铝件在常规清洗中容易\u201c发黑\u201d、\u201c过腐蚀\u201d的难题，暴露出均匀、活泼的纯铝层，为后续钝化、阳极氧化、喷涂等提供高度活化的洁净基面，显著提升结合力与膜层均匀性。`],
         applications: "压铸铝件、铝型材、铝铸件的前处理清洗与活化。",
         images: [
-          "/shihuiming-website/images/my-images/web/IMG_5847.jpg",
+          "/shihuiming-website/images/my-images/网站修改3/公司产业-铝材清洗.webp",
           "/shihuiming-website/images/my-images/web/IMG_5845.jpg",
           "/shihuiming-website/images/my-images/web/IMG_5846.jpg",
         ],
@@ -285,7 +284,7 @@ export const siteContent = {
         details: ["绿色环保：不含任何铬离子及重金属，直通全球最高级别的RoHS和REACH检测。", "卓越涂装附着力：在铝材表面形成的保护膜不仅具备强大的裸膜防腐力，更能与喷涂、粉末涂装、烤漆层形成极强的化学键合，彻底消除涂层起泡、脱落隐患。"],
         applications: "新能源汽车电池托盘、3C电子压铸机壳、建筑铝型材。",
         images: [
-          "/shihuiming-website/images/my-images/web/IMG_5848.jpg",
+          "/shihuiming-website/images/my-images/网站修改3/公司产业-铝材钝化.webp",
           "/shihuiming-website/images/my-images/web/IMG_5853.jpg",
           "/shihuiming-website/images/my-images/web/IMG_5900.jpg",
         ],
@@ -300,7 +299,7 @@ export const siteContent = {
         details: ["药水使用寿命长、带出损耗低，可用于各种铝材，是对表面观赏性与功能性同时提出较高要求的铝制零部件、装饰条及电子产品外壳的理想选择。"],
         applications: "铝制零部件、装饰条、电子产品外壳。",
         images: [
-          "/shihuiming-website/images/my-images/web/IMG_5849.jpg",
+          "/shihuiming-website/images/my-images/网站修改3/公司产业-铝材抛光.png",
           "/shihuiming-website/images/my-images/web/IMG_5901.jpg",
           "/shihuiming-website/images/my-images/web/IMG_5902.jpg",
         ],
@@ -309,19 +308,19 @@ export const siteContent = {
     ],
     technology: [
       {
-        title: "一、 绿色化学与可持续发展技术",
+        title: "绿色化学与可持续发展技术",
         text: "我们坚持将环保作为技术创新的第一准则，通过革新性配方从根源上消除传统表面处理的高污染痛点，助力企业打造“绿色车间”。\n\n革新性无黄烟/无酸雾配方：突破传统不锈钢酸洗钝化工艺的环保瓶颈，彻底消除作业环境中的刺激性酸雾及黄烟污染，全面保障职业健康与合规排放。\n\n100% 无重金属与无铬化处理：全面摒弃传统配方中的铬酸、硝酸等成分。铝合金钝化采用环保无六价铬原位成膜技术，铜材处理实现完全无重金属化，全线产品直通全球最高级别的 RoHS 和 REACH 环保标准。",
       },
       {
-        title: "二、 微观纳米级防护与极限防腐技术",
+        title: "微观纳米级防护与极限防腐技术",
         text: "针对严苛环境下的应用需求，我们运用纳米级成膜与微观化学反应，为金属表面构建坚不可摧的防护屏障。\n\n纳米定向钝化技术：在铜材表面定向生成无色透明的纳米级保护膜，有效隔绝腐蚀介质。在将抗变色周期延长十数倍的同时，完全不影响基材的原有导电性、导热性与可焊性。\n\n富铬保护膜重构技术：针对不锈钢基体，通过微观反应在表面重构致密的富铬氧化膜，将抗点蚀与缝隙腐蚀能力推向极致，中性盐雾测试（NSS）寿命可大幅提升至 1000 小时以上。",
       },
       {
-        title: "三、 无损精密控制与微观整平技术",
+        title: "无损精密控制与微观整平技术",
         text: "针对高精密零部件的严格公差要求，我们的药剂实现了“只去污除锈、不伤及基材”的完美平衡。\n\n原色微观钝化（零尺寸改变）：药剂配方温和且靶向性强，在强力去除氧化皮与焊斑的同时，绝不改变高精密工件的原有尺寸、配合公差及表面粗糙度，同时彻底杜绝氢脆风险。\n\n电化学选择性溶解技术：突破传统机械抛光的物理局限，药剂能够深入复杂异型件、内孔、盲孔及精密细螺纹等“技术死角”。通过选择性溶解微观峰谷，大幅降低粗糙度（Ra值），直抵均匀一致的镜面级或高质感亚光效果。",
       },
       {
-        title: "四、 界面深度活化与化学键合技术",
+        title: "界面深度活化与化学键合技术",
         text: "良好的表面预处理是后续工艺的基石。我们的活化技术不仅解决清洁问题，更为后续涂装与电镀提供完美的界面环境。\n\n抗黑化深度活化配方：攻克压铸铝在常规清洗中极易“发黑”或“过腐蚀”的行业难题。高效剥离脱模剂与硅灰，暴露出均匀、活泼的纯铝层，为后续工艺提供绝佳基面。\n\n强效化学键合底层技术：在铝材表面生成的环保转化膜，不仅具备卓越的裸膜防腐能力，更能与后续的喷涂、粉末涂装或烤漆层形成极强的化学键合，彻底消除涂层起泡、脱落的隐患，实现涂装附着力的跨越式提升。",
       },
     ],
@@ -415,11 +414,10 @@ export const siteContent = {
         "To provide premium products and efficient services for metal product enterprises nationwide, continuously delve into metal surface treatment technologies, and align with advanced international standards.",
     },
     nav: [
-      { label: "Home", href: "/list/184" },
       { label: "About", href: "/list/6" },
-      { label: "Industries", href: "/list/1" },
-      { label: "Applications", href: "/list/193" },
-      { label: "Innovation", href: "/list/6" },
+      { label: "Industries", href: "/list/190" },
+      { label: "Applications", href: "/list/194" },
+      { label: "Innovation", href: "/list/184" },
       { label: "Contact", href: "/list/179" },
     ],
     labels: {
@@ -507,7 +505,7 @@ export const siteContent = {
         applications: "Pre-cleaning of stainless steel stamped parts, welded components, and precision hardware.",
         standards: "Compliant with EU RoHS and REACH environmental standards.",
         images: [
-          "/shihuiming-website/images/my-images/web/IMG_5900.jpg",
+          "/shihuiming-website/images/my-images/网站修改3/公司产业-不锈钢除油.jpeg",
           "/shihuiming-website/images/my-images/web/IMG_5903.jpg",
           "/shihuiming-website/images/my-images/web/IMG_5850.jpg",
         ],
@@ -523,7 +521,7 @@ export const siteContent = {
         applications: "Food machinery, medical devices, sanitary hardware, and outdoor stainless steel products.",
         standards: "Compliant with EU RoHS and REACH standards, verified by SGS non-toxic testing.",
         images: [
-          "/shihuiming-website/images/my-images/web/IMG_5851.jpg",
+          "/shihuiming-website/images/my-images/网站修改3/公司产业-不锈钢钝化.jpeg",
           "/shihuiming-website/images/my-images/web/IMG_5852.jpg",
           "/shihuiming-website/images/my-images/web/IMG_5898.jpg",
         ],
@@ -538,7 +536,7 @@ export const siteContent = {
         details: ["Mirror-grade finish: Significantly reduces surface roughness (Ra value), presenting uniformly brilliant mirror gloss or matte texture. Surface defects are removed, and resistance to pitting and crevice corrosion is markedly enhanced.", "No dead corners: Perfectly addresses complex irregular parts, inner holes, blind holes, and precision fine threads \u2014 technical blind spots that mechanical polishing cannot reach."],
         applications: "Pharmaceutical and semiconductor piping, premium tableware, precision springs, and automotive metal trim.",
         images: [
-          "/shihuiming-website/images/my-images/web/IMG_5899.jpg",
+          "/shihuiming-website/images/my-images/网站修改3/公司产业-不锈钢电解抛光.jpeg",
           "/shihuiming-website/images/my-images/web/IMG_5901.jpg",
           "/shihuiming-website/images/my-images/web/IMG_5902.jpg",
         ],
@@ -553,7 +551,7 @@ export const siteContent = {
         details: ["After cleaning, copper materials regain their bright natural color with no residue and good wettability, seamlessly transitioning to subsequent electroplating, welding, or passivation processes."],
         applications: "Electronic connectors, copper tubing, copper decorative parts, and precision copper components.",
         images: [
-          "/shihuiming-website/images/my-images/企业照片/企业设备 1.jpg",
+          "/shihuiming-website/images/my-images/网站修改3/公司产业-铜材清洗.webp",
           "/shihuiming-website/images/my-images/企业照片/企业设备 2.jpg",
           "/shihuiming-website/images/my-images/企业照片/企业厂房 6.jpg",
         ],
@@ -568,7 +566,7 @@ export const siteContent = {
         details: ["Rapid brightening: Quickly restores the native metallic luster of copper parts with uniform and brilliant color.", "Eco-friendly, no heavy metals: Completely eliminates highly polluting components such as chromic acid and nitric acid from traditional formulations, with simple and compliant wastewater treatment."],
         applications: "Copper nameplates, copper hardware and sanitary ware, copper crafts, and electronic heat-sink modules.",
         images: [
-          "/shihuiming-website/images/my-images/企业照片/企业厂房 7.jpg",
+          "/shihuiming-website/images/my-images/网站修改3/公司产业-铜材抛光.webp",
           "/shihuiming-website/images/my-images/企业照片/企业厂房 5.jpg",
           "/shihuiming-website/images/my-images/企业照片/企业大楼.jpg",
         ],
@@ -583,7 +581,7 @@ export const siteContent = {
         details: ["Long-lasting oxidation resistance: After this passivation treatment, the anti-tarnish period of copper materials can be extended several times to over ten times, while maintaining good conductivity, thermal conductivity, and solderability of the substrate. The film does not affect welding or subsequent assembly \u2014 a long-term solution for preventing copper oxidation blackening and ensuring lasting appearance and functional stability."],
         applications: "Electronic connectors, copper busbars, copper artworks, and sanitary hardware.",
         images: [
-          "/shihuiming-website/images/my-images/企业照片/企业厂房 4.jpg",
+          "/shihuiming-website/images/my-images/网站修改3/公司产业-铜材钝化.jpg",
           "/shihuiming-website/images/my-images/企业照片/企业厂房 3.jpg",
           "/shihuiming-website/images/my-images/企业照片/企业厂房 2.jpg",
         ],
@@ -598,7 +596,7 @@ export const siteContent = {
         details: ["Produces no acid-mist inhibitory residues during treatment and does not corrode the substrate, thoroughly solving the common problems of 'blackening' and 'over-etching' of die-cast aluminum parts in conventional cleaning. Exposes a uniform, active pure aluminum layer, providing a highly activated clean base for subsequent passivation, anodizing, and spray coating, significantly improving adhesion and film uniformity."],
         applications: "Pre-treatment cleaning and activation of die-cast aluminum parts, aluminum profiles, and aluminum castings.",
         images: [
-          "/shihuiming-website/images/my-images/web/IMG_5847.jpg",
+          "/shihuiming-website/images/my-images/网站修改3/公司产业-铝材清洗.webp",
           "/shihuiming-website/images/my-images/web/IMG_5845.jpg",
           "/shihuiming-website/images/my-images/web/IMG_5846.jpg",
         ],
@@ -613,7 +611,7 @@ export const siteContent = {
         details: ["Green and eco-friendly: Contains absolutely no chromium ions or heavy metals, passing the world's highest-level RoHS and REACH testing.", "Excellent coating adhesion: The protective film formed on the aluminum surface not only provides strong bare-film corrosion resistance but also forms powerful chemical bonds with spray coating, powder coating, and baked paint layers, thoroughly eliminating risks of coating blistering and peeling."],
         applications: "New energy vehicle battery trays, 3C electronic die-cast housings, and architectural aluminum profiles.",
         images: [
-          "/shihuiming-website/images/my-images/web/IMG_5848.jpg",
+          "/shihuiming-website/images/my-images/网站修改3/公司产业-铝材钝化.webp",
           "/shihuiming-website/images/my-images/web/IMG_5853.jpg",
           "/shihuiming-website/images/my-images/web/IMG_5900.jpg",
         ],
@@ -628,7 +626,7 @@ export const siteContent = {
         details: ["Long solution life with low drag-out loss, applicable to various aluminum materials \u2014 an ideal choice for aluminum components, decorative strips, and electronic product housings that require both high surface aesthetics and functionality."],
         applications: "Aluminum components, decorative strips, and electronic product housings.",
         images: [
-          "/shihuiming-website/images/my-images/web/IMG_5849.jpg",
+          "/shihuiming-website/images/my-images/网站修改3/公司产业-铝材抛光.png",
           "/shihuiming-website/images/my-images/web/IMG_5901.jpg",
           "/shihuiming-website/images/my-images/web/IMG_5902.jpg",
         ],

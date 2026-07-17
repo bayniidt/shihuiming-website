@@ -1,5 +1,5 @@
-import { ProductsPage } from "@/components/pages/CompanyPages";
+import { redirect } from "next/navigation";
 
 export default function Page1() {
-  return <ProductsPage locale="zh" />;
+  redirect("/list/190");
 }

@@ -15,25 +15,23 @@ interface NavItem {
 const navChildren = {
   about: {
     zh: [
-      { label: "公司简介", href: "/list/184#about1", internal: true },
-      { label: "核心价值", href: "/list/184#about2", internal: true },
-      { label: "企业实景", href: "/list/184#about3", internal: true },
+      { label: "公司简介", href: "/list/6#about1", internal: true },
+      { label: "核心价值", href: "/list/6#about2", internal: true },
+      { label: "企业实景", href: "/list/6#about3", internal: true },
     ],
     en: [
-      { label: "Company Profile", href: "/list/184#about1", internal: true },
-      { label: "Core Values", href: "/list/184#about2", internal: true },
-      { label: "Factory Gallery", href: "/list/184#about3", internal: true },
+      { label: "Company Profile", href: "/list/6#about1", internal: true },
+      { label: "Core Values", href: "/list/6#about2", internal: true },
+      { label: "Factory Gallery", href: "/list/6#about3", internal: true },
     ],
   },
   applications: {
     zh: [
-      { label: "家居五金", href: "/list/193", internal: true },
       { label: "家电制造", href: "/list/194", internal: true },
       { label: "医疗器械", href: "/list/195", internal: true },
       { label: "紧固件与精密机加工", href: "/list/196", internal: true },
     ],
     en: [
-      { label: "Home Hardware", href: "/list/193", internal: true },
       { label: "Home Appliances", href: "/list/194", internal: true },
       { label: "Medical Devices", href: "/list/195", internal: true },
       { label: "Fasteners & Machining", href: "/list/196", internal: true },
@@ -42,17 +40,17 @@ const navChildren = {
 } satisfies Record<string, Record<Locale, { label: string; href: string; internal: boolean }[]>>;
 
 const navToParentMap: Record<string, number> = {
-  "/list/6": 1,
-  "/list/1": 2,
-  "/list/190": 2,
-  "/list/191": 2,
-  "/list/192": 2,
-  "/list/193": 3,
-  "/list/194": 3,
-  "/list/195": 3,
-  "/list/196": 3,
-  "/list/184": 0,
-  "/list/179": 5,
+  "/list/6": 0,
+  "/list/1": 1,
+  "/list/190": 1,
+  "/list/191": 1,
+  "/list/192": 1,
+  "/list/193": 2,
+  "/list/194": 2,
+  "/list/195": 2,
+  "/list/196": 2,
+  "/list/184": 3,
+  "/list/179": 4,
 };
 
 function stripLocale(pathname: string) {
@@ -79,16 +77,16 @@ export default function Header({ locale = "zh" }: { locale?: Locale }) {
   const content = siteContent[locale];
 
   const normalPath = stripLocale(pathname);
-  const activeIndex = normalPath.startsWith("/list/products/") ? 2 : navToParentMap[normalPath] ?? (normalPath === "/" ? 0 : -1);
+  const activeIndex = normalPath.startsWith("/list/products/") ? 1 : navToParentMap[normalPath] ?? (normalPath === "/" ? 0 : -1);
   const otherLocale: Locale = locale === "zh" ? "en" : "zh";
-  const altPath = normalPath === "/" ? "/list/184" : normalPath;
+  const altPath = normalPath === "/" ? "/list/6" : normalPath;
   const languageHref = localizedPath(altPath, otherLocale);
 
   const navItems: NavItem[] = content.nav.map((item, index) => {
     if (index === 0) {
       return { ...item, children: navChildren.about[locale] };
     }
-    if (index === 2) {
+    if (index === 1) {
       return {
         ...item,
         children: (["stainless", "copper", "aluminum"] as const).map((category) => ({
@@ -98,7 +96,7 @@ export default function Header({ locale = "zh" }: { locale?: Locale }) {
         })),
       };
     }
-    if (index === 3) {
+    if (index === 2) {
       return { ...item, children: navChildren.applications[locale] };
     }
     return item;
@@ -123,7 +121,7 @@ export default function Header({ locale = "zh" }: { locale?: Locale }) {
       <header className="fixed top-0 left-0 w-full h-[140px] bg-white z-[9999999] transition-all duration-[0.3s] min-w-[1180px]">
         <div className="container-site h-[140px]">
           <div className="float-left mt-[43px] transition-all duration-[0.3s]">
-            <Link href={localizedPath("/list/184", locale)} className="block">
+            <Link href={localizedPath("/list/6", locale)} className="block">
               <Image src={content.brand.logo} alt={content.brand.shortName} width={171} height={92} priority className="h-[57px] w-auto object-contain" />
             </Link>
           </div>

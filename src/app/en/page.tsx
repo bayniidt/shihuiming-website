@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation";
 
 export default function EnglishHome() {
-  redirect("/en/list/184");
+  redirect("/en/list/6");
 }

@@ -93,14 +93,14 @@ export function AboutPage({ locale }: { locale: Locale }) {
   const content = siteContent[locale];
   return (
     <>
-      <Banner title={content.nav[1].label} subtitle={content.brand.slogan} bgImage={companyImages[6]} />
+      <Banner title={content.nav[0].label} subtitle={content.brand.slogan} bgImage={companyImages[6]} />
       <Subnav
         locale={locale}
         links={[
-          { text: locale === "zh" ? "公司简介" : "Company Profile", href: "/list/184#about1", cur: true },
-          { text: content.labels.mission, href: "/list/184#mission" },
-          { text: content.labels.coreValues, href: "/list/184#about2" },
-          { text: content.labels.gallery, href: "/list/184#about3" },
+          { text: locale === "zh" ? "公司简介" : "Company Profile", href: "/list/6#about1", cur: true },
+          { text: content.labels.mission, href: "/list/6#mission" },
+          { text: content.labels.coreValues, href: "/list/6#about2" },
+          { text: content.labels.gallery, href: "/list/6#about3" },
         ]}
       />
       <section id="about1" className="py-[80px] bg-white">
@@ -214,14 +214,11 @@ export function ProductsPage({ locale, focus, productSlug }: { locale: Locale; f
       <Banner title={title} subtitle={focusProduct?.subtitle ?? content.brand.slogan} bgImage={getCategoryBgImage(focus)} />
       <Subnav
         locale={locale}
-        links={[
-          { text: content.labels.productMatrix, href: "/list/1", cur: !focusProduct && !focus },
-          ...(["stainless", "copper", "aluminum"] as const).map((category) => ({
+        links={(["stainless", "copper", "aluminum"] as const).map((category) => ({
             text: content.productCategories[category],
             href: productCategoryPath(category),
             cur: !focusProduct && focus === category,
-          })),
-        ]}
+          }))}
       />
       <SectionIntro title={title} eyebrow={content.brand.shortName} />
       <section className="py-[66px] bg-white">
@@ -420,7 +417,7 @@ export function InnovationPage({ locale }: { locale: Locale }) {
   const content = siteContent[locale];
   return (
     <>
-      <Banner title={content.nav[4].label} subtitle={content.brand.slogan} bgImage={companyImages[9]} />
+      <Banner title={content.nav[3].label} subtitle={content.brand.slogan} bgImage={companyImages[9]} />
       <SectionIntro title={content.innovationHeadline} eyebrow={content.labels.technology} />
       <section className="py-[66px] bg-white">
         <div className="w1140">
@@ -432,7 +429,7 @@ export function InnovationPage({ locale }: { locale: Locale }) {
                   <Image src={companyImages[index + 10]} alt={item.title} width={960} height={540} className="w-full h-[320px] object-cover transition-transform duration-[0.5s] group-hover:scale-105" />
                 </div>
                 <div className="pt-[18px] pb-[24px]">
-                  <h3 className="text-[22px] font-bold text-[#212121] mb-[10px]">{item.title}</h3>
+                  <h3 className="mb-[10px] text-[22px] font-bold text-[var(--color-site-primary)]">{item.title}</h3>
                   <p className="whitespace-pre-line text-[15px] leading-[28px] text-[#666]">{item.text}</p>
                 </div>
               </article>
@@ -445,22 +442,22 @@ export function InnovationPage({ locale }: { locale: Locale }) {
 }
 
 const applicationImages = {
-  "193": "/shihuiming-website/images/my-images/行业运用/家居五金.png",
-  "194": "/shihuiming-website/images/my-images/行业运用/家电制造.png",
-  "195": "/shihuiming-website/images/my-images/行业运用/医疗器械.png",
-  "196": "/shihuiming-website/images/my-images/行业运用/紧固件.png",
+  "194": "/shihuiming-website/images/my-images/网站修改3/行业应用-家电制造.jpeg",
+  "195": "/shihuiming-website/images/my-images/网站修改3/行业应用-医疗器械.jpg",
+  "196": "/shihuiming-website/images/my-images/网站修改3/行业应用-紧固件.jpeg",
 } as const;
 
 export function ApplicationsPage({ locale, slug }: { locale: Locale; slug: string }) {
   const content = siteContent[locale];
-  const app = content.applications.find((item) => item.slug === slug) ?? content.applications[0];
+  const visibleApplications = content.applications.filter((item) => item.slug !== "193");
+  const app = visibleApplications.find((item) => item.slug === slug) ?? visibleApplications[0];
   const appImage = applicationImages[app.slug as keyof typeof applicationImages] ?? companyImages[0];
   return (
     <>
       <Banner title={app.title} subtitle={content.labels.applications} bgImage={appImage} />
       <Subnav
         locale={locale}
-        links={content.applications.map((item) => ({
+        links={visibleApplications.map((item) => ({
           text: item.title,
           href: `/list/${item.slug}`,
           cur: item.slug === app.slug,

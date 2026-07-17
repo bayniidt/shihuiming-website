@@ -11,17 +11,17 @@ function getFooterColumns(locale: Locale): FooterColumn[] {
   const content = siteContent[locale];
   return [
     {
-      title: content.nav[1].label,
-      href: "/list/184",
+      title: content.nav[0].label,
+      href: "/list/6",
       children: [
-        { label: locale === "zh" ? "公司简介" : "Company Profile", href: "/list/184#about1" },
-        { label: content.labels.coreValues, href: "/list/184#about2" },
-        { label: content.labels.gallery, href: "/list/184#about3" },
+        { label: locale === "zh" ? "公司简介" : "Company Profile", href: "/list/6#about1" },
+        { label: content.labels.coreValues, href: "/list/6#about2" },
+        { label: content.labels.gallery, href: "/list/6#about3" },
       ],
     },
     {
-      title: content.nav[2].label,
-      href: "/list/1",
+      title: content.nav[1].label,
+      href: "/list/190",
       children: (["stainless", "copper", "aluminum"] as const).map((category) => ({
         label: content.productCategories[category],
         href: productCategoryPath(category),
@@ -29,11 +29,13 @@ function getFooterColumns(locale: Locale): FooterColumn[] {
     },
     {
       title: content.labels.applications,
-      href: "/list/193",
-      children: content.applications.map((item) => ({
-        label: item.title,
-        href: `/list/${item.slug}`,
-      })),
+      href: "/list/194",
+      children: content.applications
+        .filter((item) => item.slug !== "193")
+        .map((item) => ({
+          label: item.title,
+          href: `/list/${item.slug}`,
+        })),
     },
   ];
 }
