@@ -165,7 +165,7 @@ export function AboutPage({ locale }: { locale: Locale }) {
               <p className="text-[16px] text-[#666]">{content.market}</p>
             </div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[18px]">
+          <div className="grid grid-cols-1 gap-[18px] sm:grid-cols-2">
             {galleryImages.map((image, index) => (
               <Image
                 key={image}
@@ -173,6 +173,7 @@ export function AboutPage({ locale }: { locale: Locale }) {
                 alt={`${content.labels.gallery} ${index + 1}`}
                 width={640}
                 height={480}
+                sizes="(min-width: 640px) 50vw, 100vw"
                 className="w-full h-[260px] object-cover"
               />
             ))}

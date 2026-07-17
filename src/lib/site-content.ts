@@ -21,10 +21,10 @@ export const companyImages = [
 ] as const;
 
 export const galleryImages = [
-  "/shihuiming-website/images/my-images/企业照片/企业厂房.jpg",
-  "/shihuiming-website/images/my-images/企业照片/企业厂房 5.jpg",
-  "/shihuiming-website/images/my-images/企业照片/企业厂房 7.jpg",
   "/shihuiming-website/images/my-images/企业照片/企业设备 1.jpg",
+  "/shihuiming-website/images/my-images/企业照片/企业厂房.jpg",
+  "/shihuiming-website/images/my-images/企业照片/企业厂房 7.jpg",
+  "/shihuiming-website/images/my-images/企业照片/企业厂房 5.jpg",
 ] as const;
 
 export interface ProductCategory {
