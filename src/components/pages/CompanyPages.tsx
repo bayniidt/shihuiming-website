@@ -1,5 +1,4 @@
 import Banner from "@/components/Banner"
-import { ProductImageCarousel } from "@/components/ProductImageCarousel"
 import { companyImages, galleryImages, localizedPath, productCategoryPath, siteContent, type Locale, type ProductCategory } from "@/lib/site-content"
 import { BadgeCheck, Building2, Factory, Globe2, ShieldCheck, UsersRound, type LucideIcon } from "lucide-react"
 import Image from "next/image"
@@ -344,7 +343,18 @@ function ProductCategoryCard({
       }`}
     >
       {hasImages ? (
-        <ProductImageCarousel images={product.images} title={product.title} />
+        <div className="bg-[var(--color-site-light-bg)] p-[18px]">
+          <div className="flex aspect-square items-center justify-center overflow-hidden bg-white">
+            <Image
+              src={product.images[0]}
+              alt={product.title}
+              width={520}
+              height={520}
+              sizes="(min-width: 1024px) 430px, 100vw"
+              className="h-full w-full object-fill p-[8px]"
+            />
+          </div>
+        </div>
       ) : (
         <div className="bg-[linear-gradient(135deg,rgba(0,122,80,0.11),rgba(8,120,214,0.10))] p-[30px] flex flex-col justify-between min-h-[250px]">
           <div>
@@ -410,6 +420,12 @@ function ProductCategoryCard({
   );
 }
 
+const innovationImages = [
+  "/shihuiming-website/images/my-images/网站修改3/科技创新-绿色化学.jpeg",
+  "/shihuiming-website/images/my-images/网站修改3/科技创新-围观纳米.jpg",
+  "/shihuiming-website/images/my-images/网站修改3/科技创新-无损精密.jpg",
+] as const;
+
 export function InnovationPage({ locale }: { locale: Locale }) {
   const content = siteContent[locale];
   return (
@@ -423,7 +439,7 @@ export function InnovationPage({ locale }: { locale: Locale }) {
             {content.technology.map((item, index) => (
               <article key={item.title} className="group">
                 <div className="overflow-hidden">
-                  <Image src={companyImages[index + 10]} alt={item.title} width={960} height={960} className="aspect-square w-full object-cover transition-transform duration-[0.5s] group-hover:scale-105" />
+                  <Image src={innovationImages[index] ?? companyImages[index + 10]} alt={item.title} width={960} height={960} className="aspect-square w-full object-cover transition-transform duration-[0.5s] group-hover:scale-105" />
                 </div>
                 <div className="pt-[18px] pb-[24px]">
                   <h3 className="mb-[10px] text-[22px] font-bold text-[var(--color-site-primary)]">{item.title}</h3>
