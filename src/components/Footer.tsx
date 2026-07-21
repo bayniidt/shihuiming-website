@@ -29,13 +29,11 @@ function getFooterColumns(locale: Locale): FooterColumn[] {
     },
     {
       title: content.labels.applications,
-      href: "/list/194",
-      children: content.applications
-        .filter((item) => item.slug !== "193")
-        .map((item) => ({
-          label: item.title,
-          href: `/list/${item.slug}`,
-        })),
+      href: "/list/193",
+      children: content.applications.map((item) => ({
+        label: item.title,
+        href: `/list/${item.slug}`,
+      })),
     },
   ];
 }
@@ -77,12 +75,12 @@ export default function Footer({ locale = "zh" }: { locale?: Locale }) {
               ))}
             </div>
 
-            <div className="flex-1 min-w-[280px] mx-[30px]">
-              <div className="h-[220px] w-full overflow-hidden rounded-[4px] border border-white/10">
+            <div className="flex-[1.45] min-w-[420px] mx-[30px]">
+              <div className="h-[320px] w-full overflow-hidden rounded-[4px] border border-white/10">
                 <iframe
-                  src="https://www.openstreetmap.org/export/embed.html?bbox=113.86687%2C22.9811%2C113.87687%2C22.9911&layer=mapnik&marker=22.9861%2C113.87187"
+                  src="https://api.map.baidu.com/geocoder?address=%E5%B9%BF%E4%B8%9C%E7%9C%81%E4%B8%9C%E8%8E%9E%E5%B8%82%E6%B3%89%E5%92%8C%E8%A1%972%E5%8F%B7&output=html&src=shihuiming-website"
                   title={locale === "zh" ? "东莞市世蕙鸣科技有限公司位置" : "Shihuiming Technology location"}
-                  className="h-[calc(100%+42px)] w-[calc(100%+58px)]"
+                  className="h-full w-full border-0"
                   loading="lazy"
                   referrerPolicy="no-referrer"
                 />

@@ -27,11 +27,13 @@ const navChildren = {
   },
   applications: {
     zh: [
+      { label: "家居五金", href: "/list/193", internal: true },
       { label: "家电制造", href: "/list/194", internal: true },
       { label: "医疗器械", href: "/list/195", internal: true },
       { label: "紧固件与精密机加工", href: "/list/196", internal: true },
     ],
     en: [
+      { label: "Home Hardware", href: "/list/193", internal: true },
       { label: "Home Appliances", href: "/list/194", internal: true },
       { label: "Medical Devices", href: "/list/195", internal: true },
       { label: "Fasteners & Machining", href: "/list/196", internal: true },

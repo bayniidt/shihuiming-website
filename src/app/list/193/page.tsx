@@ -1,5 +1,5 @@
-import { redirect } from "next/navigation";
+import { ApplicationsPage } from "@/components/pages/CompanyPages";
 
 export default function Page193() {
-  redirect("/list/194");
+  return <ApplicationsPage locale="zh" slug="193" />;
 }

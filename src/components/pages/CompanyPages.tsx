@@ -1,4 +1,5 @@
 import Banner from "@/components/Banner"
+import { ProductImageCarousel } from "@/components/ProductImageCarousel"
 import { companyImages, galleryImages, localizedPath, productCategoryPath, siteContent, type Locale, type ProductCategory } from "@/lib/site-content"
 import { BadgeCheck, Building2, Factory, Globe2, ShieldCheck, UsersRound, type LucideIcon } from "lucide-react"
 import Image from "next/image"
@@ -128,8 +129,8 @@ export function AboutPage({ locale }: { locale: Locale }) {
                   src={image}
                   alt={`${content.brand.shortName} ${index + 1}`}
                   width={960}
-                  height={600}
-                  className={`w-full object-cover ${index === 0 ? "col-span-2 h-[280px]" : "h-[180px]"}`}
+                  height={960}
+                  className={`aspect-square w-full object-cover ${index === 0 ? "col-span-2" : ""}`}
                 />
               ))}
             </div>
@@ -172,9 +173,9 @@ export function AboutPage({ locale }: { locale: Locale }) {
                 src={image}
                 alt={`${content.labels.gallery} ${index + 1}`}
                 width={640}
-                height={480}
+                height={640}
                 sizes="(min-width: 640px) 50vw, 100vw"
-                className="w-full h-[260px] object-cover"
+                className="aspect-square w-full object-cover"
               />
             ))}
           </div>
@@ -299,8 +300,8 @@ function CategoryLandingCard({
           src={product.images[0] ?? companyImages[0]}
           alt={product.title}
           width={960}
-          height={640}
-          className="h-[220px] w-full object-cover transition-transform duration-[0.5s] group-hover:scale-105"
+          height={960}
+          className="aspect-square w-full object-cover transition-transform duration-[0.5s] group-hover:scale-105"
         />
       </div>
       <div className="p-[22px]">
@@ -343,18 +344,7 @@ function ProductCategoryCard({
       }`}
     >
       {hasImages ? (
-        <div className="bg-[var(--color-site-light-bg)] p-[18px]">
-          <div className="bg-white h-[290px] flex items-center justify-center overflow-hidden">
-            <Image src={product.images[0]} alt={product.title} width={384} height={288} className="max-h-full w-full object-contain p-[8px]" />
-          </div>
-          <div className="grid grid-cols-3 gap-[10px] mt-[12px]">
-            {product.images.map((image, imageIndex) => (
-              <div key={image} className="bg-white h-[86px] flex items-center justify-center overflow-hidden">
-                <Image src={image} alt={`${product.title} ${imageIndex + 1}`} width={384} height={288} className="max-h-full w-full object-contain p-[6px]" />
-              </div>
-            ))}
-          </div>
-        </div>
+        <ProductImageCarousel images={product.images} title={product.title} />
       ) : (
         <div className="bg-[linear-gradient(135deg,rgba(0,122,80,0.11),rgba(8,120,214,0.10))] p-[30px] flex flex-col justify-between min-h-[250px]">
           <div>
@@ -433,7 +423,7 @@ export function InnovationPage({ locale }: { locale: Locale }) {
             {content.technology.map((item, index) => (
               <article key={item.title} className="group">
                 <div className="overflow-hidden">
-                  <Image src={companyImages[index + 10]} alt={item.title} width={960} height={540} className="w-full h-[320px] object-cover transition-transform duration-[0.5s] group-hover:scale-105" />
+                  <Image src={companyImages[index + 10]} alt={item.title} width={960} height={960} className="aspect-square w-full object-cover transition-transform duration-[0.5s] group-hover:scale-105" />
                 </div>
                 <div className="pt-[18px] pb-[24px]">
                   <h3 className="mb-[10px] text-[22px] font-bold text-[var(--color-site-primary)]">{item.title}</h3>
@@ -449,6 +439,7 @@ export function InnovationPage({ locale }: { locale: Locale }) {
 }
 
 const applicationImages = {
+  "193": "/shihuiming-website/images/my-images/网站修改3/行业应用-家居五金.jpeg",
   "194": "/shihuiming-website/images/my-images/网站修改3/行业应用-家电制造.jpeg",
   "195": "/shihuiming-website/images/my-images/网站修改3/行业应用-医疗器械.jpg",
   "196": "/shihuiming-website/images/my-images/网站修改3/行业应用-紧固件.jpeg",
@@ -456,7 +447,7 @@ const applicationImages = {
 
 export function ApplicationsPage({ locale, slug }: { locale: Locale; slug: string }) {
   const content = siteContent[locale];
-  const visibleApplications = content.applications.filter((item) => item.slug !== "193");
+  const visibleApplications = content.applications;
   const app = visibleApplications.find((item) => item.slug === slug) ?? visibleApplications[0];
   const appImage = applicationImages[app.slug as keyof typeof applicationImages] ?? companyImages[0];
   return (
@@ -474,7 +465,7 @@ export function ApplicationsPage({ locale, slug }: { locale: Locale; slug: strin
       <section className="py-[66px] bg-white">
         <div className="w1140">
           <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-[42px] items-start mb-[48px]">
-            <Image src={appImage} alt={app.title} width={960} height={540} className="w-full h-[420px] object-cover" />
+            <Image src={appImage} alt={app.title} width={960} height={960} className="aspect-square w-full object-cover" />
             <div>
               <h3 className="text-[28px] font-bold text-[#212121] mb-[18px]">{app.title}</h3>
               <p className="text-[17px] leading-[34px] text-[#555] mb-[24px]">{app.text}</p>

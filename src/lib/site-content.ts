@@ -89,7 +89,7 @@ export const siteContent = {
     nav: [
       { label: "关于世蕙鸣", href: "/list/6" },
       { label: "公司产业", href: "/list/190" },
-      { label: "行业应用", href: "/list/194" },
+      { label: "行业应用", href: "/list/193" },
       { label: "科技创新", href: "/list/184" },
       { label: "联系我们", href: "/list/179" },
     ],
@@ -389,7 +389,7 @@ export const siteContent = {
     contact: {
       phone: "13600258452",
       service: "24小时内专家级技术响应",
-      address: "广东省东莞市",
+      address: "广东省东莞市泉和街2号",
       email: "info@shihuiming.com",
     },
   },
@@ -416,7 +416,7 @@ export const siteContent = {
     nav: [
       { label: "About", href: "/list/6" },
       { label: "Industries", href: "/list/190" },
-      { label: "Applications", href: "/list/194" },
+      { label: "Applications", href: "/list/193" },
       { label: "Innovation", href: "/list/184" },
       { label: "Contact", href: "/list/179" },
     ],
