@@ -42,17 +42,17 @@ const navChildren = {
 } satisfies Record<string, Record<Locale, { label: string; href: string; internal: boolean }[]>>;
 
 const navToParentMap: Record<string, number> = {
-  "/list/6": 0,
-  "/list/1": 1,
-  "/list/190": 1,
-  "/list/191": 1,
-  "/list/192": 1,
-  "/list/193": 2,
-  "/list/194": 2,
-  "/list/195": 2,
-  "/list/196": 2,
-  "/list/184": 3,
-  "/list/179": 4,
+  "/list/6": 1,
+  "/list/1": 2,
+  "/list/190": 2,
+  "/list/191": 2,
+  "/list/192": 2,
+  "/list/193": 3,
+  "/list/194": 3,
+  "/list/195": 3,
+  "/list/196": 3,
+  "/list/184": 4,
+  "/list/179": 5,
 };
 
 function stripLocale(pathname: string) {
@@ -79,16 +79,16 @@ export default function Header({ locale = "zh" }: { locale?: Locale }) {
   const content = siteContent[locale];
 
   const normalPath = stripLocale(pathname);
-  const activeIndex = normalPath.startsWith("/list/products/") ? 1 : navToParentMap[normalPath] ?? (normalPath === "/" ? 0 : -1);
+  const activeIndex = normalPath.startsWith("/list/products/") ? 2 : navToParentMap[normalPath] ?? (normalPath === "/" ? 0 : -1);
   const otherLocale: Locale = locale === "zh" ? "en" : "zh";
-  const altPath = normalPath === "/" ? "/list/6" : normalPath;
+  const altPath = normalPath === "/" ? "/" : normalPath;
   const languageHref = localizedPath(altPath, otherLocale);
 
   const navItems: NavItem[] = content.nav.map((item, index) => {
-    if (index === 0) {
+    if (index === 1) {
       return { ...item, children: navChildren.about[locale] };
     }
-    if (index === 1) {
+    if (index === 2) {
       return {
         ...item,
         children: (["stainless", "copper", "aluminum"] as const).map((category) => ({
@@ -98,7 +98,7 @@ export default function Header({ locale = "zh" }: { locale?: Locale }) {
         })),
       };
     }
-    if (index === 2) {
+    if (index === 3) {
       return { ...item, children: navChildren.applications[locale] };
     }
     return item;

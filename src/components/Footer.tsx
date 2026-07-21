@@ -11,7 +11,7 @@ function getFooterColumns(locale: Locale): FooterColumn[] {
   const content = siteContent[locale];
   return [
     {
-      title: content.nav[0].label,
+      title: content.nav[1].label,
       href: "/list/6",
       children: [
         { label: locale === "zh" ? "公司简介" : "Company Profile", href: "/list/6#about1" },
@@ -20,7 +20,7 @@ function getFooterColumns(locale: Locale): FooterColumn[] {
       ],
     },
     {
-      title: content.nav[1].label,
+      title: content.nav[2].label,
       href: "/list/190",
       children: (["stainless", "copper", "aluminum"] as const).map((category) => ({
         label: content.productCategories[category],

@@ -54,6 +54,77 @@ function Subnav({
 
 const missionIcons: LucideIcon[] = [Building2, ShieldCheck, BadgeCheck, Factory, UsersRound, Globe2];
 
+export function HomePage({ locale }: { locale: Locale }) {
+  const content = siteContent[locale];
+  const featuredProducts = content.products.slice(0, 3);
+  const featuredApplications = content.applications.slice(0, 4);
+
+  return (
+    <>
+      <section
+        className="relative flex min-h-[620px] items-center bg-cover bg-center"
+        style={{ backgroundImage: `linear-gradient(90deg, rgba(0,43,36,0.76), rgba(0,43,36,0.34)), url('${encodeURI(companyImages[2])}')` }}
+      >
+        <div className="contain text-white">
+          <p className="mb-[16px] text-[18px] font-semibold tracking-[5px] text-white/85">{content.brand.slogan}</p>
+          <h1 className="max-w-[840px] text-[48px] font-bold leading-[1.2] md:text-[64px]">{content.brand.name}</h1>
+          <p className="mt-[24px] max-w-[760px] text-[20px] leading-[36px] text-white/90">{content.brand.tagline}</p>
+          <div className="mt-[42px] flex flex-wrap gap-[14px]">
+            <Link href={localizedPath("/list/190", locale)} className="bg-[var(--color-site-primary)] px-[30px] py-[14px] text-[16px] font-semibold text-white transition-colors hover:bg-[var(--color-site-blue)]">
+              {content.nav[2].label}
+            </Link>
+            <Link href={localizedPath("/list/179", locale)} className="border border-white/70 px-[30px] py-[14px] text-[16px] font-semibold text-white transition-colors hover:bg-white hover:text-[var(--color-site-primary)]">
+              {content.labels.contactUs}
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white py-[78px]">
+        <div className="contain">
+          <div className="mb-[36px] flex items-end justify-between gap-[24px]">
+            <div>
+              <p className="mb-[10px] text-[14px] font-semibold uppercase tracking-[4px] text-[var(--color-site-orange)]">{content.brand.shortName}</p>
+              <h2 className="text-[36px] font-bold text-[#212121]">{content.labels.productMatrix}</h2>
+            </div>
+            <Link href={localizedPath("/list/190", locale)} className="text-[15px] font-semibold text-[var(--color-site-primary)] hover:text-[var(--color-site-blue)]">
+              {content.labels.viewMore}
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 gap-[24px] md:grid-cols-3">
+            {featuredProducts.map((product) => (
+              <Link key={product.slug} href={localizedPath(product.href, locale)} className="group block overflow-hidden border border-[#e5efec] bg-white">
+                <Image src={product.images[0] ?? companyImages[0]} alt={product.title} width={700} height={700} className="aspect-square w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <div className="p-[24px]">
+                  <h3 className="mb-[10px] text-[22px] font-bold text-[#212121]">{product.title}</h3>
+                  <p className="line-clamp-2 text-[15px] leading-[28px] text-[#666]">{product.subtitle}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[var(--color-site-light-bg)] py-[78px]">
+        <div className="contain">
+          <div className="mb-[36px]">
+            <p className="mb-[10px] text-[14px] font-semibold uppercase tracking-[4px] text-[var(--color-site-orange)]">{content.labels.applications}</p>
+            <h2 className="text-[36px] font-bold text-[#212121]">{locale === "zh" ? "行业应用方案" : "Application Solutions"}</h2>
+          </div>
+          <div className="grid grid-cols-1 gap-[18px] md:grid-cols-2 lg:grid-cols-4">
+            {featuredApplications.map((app) => (
+              <Link key={app.slug} href={localizedPath(`/list/${app.slug}`, locale)} className="bg-white p-[24px] transition-transform hover:-translate-y-[4px]">
+                <h3 className="mb-[12px] text-[20px] font-bold text-[var(--color-site-primary)]">{app.title}</h3>
+                <p className="line-clamp-4 text-[15px] leading-[28px] text-[#666]">{app.text}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
+
 function MissionSection({ locale }: { locale: Locale }) {
   const content = siteContent[locale];
 
@@ -93,7 +164,7 @@ export function AboutPage({ locale }: { locale: Locale }) {
   const content = siteContent[locale];
   return (
     <>
-      <Banner title={content.nav[0].label} subtitle={content.brand.slogan} bgImage={companyImages[6]} offsetRight />
+      <Banner title={content.nav[1].label} subtitle={content.brand.slogan} bgImage={companyImages[6]} offsetRight />
       <Subnav
         locale={locale}
         links={[
@@ -430,7 +501,7 @@ export function InnovationPage({ locale }: { locale: Locale }) {
   const content = siteContent[locale];
   return (
     <>
-      <Banner title={content.nav[3].label} subtitle={content.brand.slogan} bgImage={companyImages[9]} />
+      <Banner title={content.nav[4].label} subtitle={content.brand.slogan} bgImage={companyImages[9]} />
       <SectionIntro title={content.innovationHeadline} eyebrow={content.labels.technology} />
       <section className="py-[66px] bg-white">
         <div className="w1140">

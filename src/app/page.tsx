@@ -1,5 +1,10 @@
-import { redirect } from "next/navigation";
+import SiteShell from "@/components/SiteShell";
+import { HomePage } from "@/components/pages/CompanyPages";
 
 export default function Home() {
-  redirect("/list/6");
+  return (
+    <SiteShell locale="zh">
+      <HomePage locale="zh" />
+    </SiteShell>
+  );
 }
