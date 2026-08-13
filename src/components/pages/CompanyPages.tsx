@@ -164,14 +164,14 @@ export function AboutPage({ locale }: { locale: Locale }) {
   const content = siteContent[locale];
   return (
     <>
-      <Banner title={content.nav[1].label} subtitle={content.brand.slogan} bgImage={companyImages[6]} offsetRight />
+      <Banner title={content.nav[0].label} subtitle={content.brand.slogan} bgImage={companyImages[6]} offsetRight />
       <Subnav
         locale={locale}
         links={[
-          { text: locale === "zh" ? "公司简介" : "Company Profile", href: "/list/6#about1", cur: true },
-          { text: content.labels.mission, href: "/list/6#mission" },
-          { text: content.labels.coreValues, href: "/list/6#about2" },
-          { text: content.labels.gallery, href: "/list/6#about3" },
+          { text: locale === "zh" ? "公司简介" : "Company Profile", href: "/#about1", cur: true },
+          { text: content.labels.mission, href: "/#mission" },
+          { text: content.labels.coreValues, href: "/#about2" },
+          { text: content.labels.gallery, href: "/#about3" },
         ]}
       />
       <section id="about1" className="py-[80px] bg-white">

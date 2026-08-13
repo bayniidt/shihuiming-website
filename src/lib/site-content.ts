@@ -87,8 +87,8 @@ export const siteContent = {
         "为全国金属制品企业提供优质产品和高效服务，持续钻研金属表面处理技术，努力向国际先进水平看齐。",
     },
     nav: [
-      { label: "网站首页", href: "/" },
-      { label: "关于世蕙鸣", href: "/list/6" },
+      { label: "关于世蕙鸣", href: "/" },
+      { label: "网站首页", href: "/list/1" },
       { label: "公司产业", href: "/list/190" },
       { label: "行业应用", href: "/list/193" },
       { label: "科技创新", href: "/list/184" },
@@ -415,8 +415,8 @@ export const siteContent = {
         "To provide premium products and efficient services for metal product enterprises nationwide, continuously delve into metal surface treatment technologies, and align with advanced international standards.",
     },
     nav: [
-      { label: "Home", href: "/" },
-      { label: "About", href: "/list/6" },
+      { label: "About", href: "/" },
+      { label: "Home", href: "/list/1" },
       { label: "Industries", href: "/list/190" },
       { label: "Applications", href: "/list/193" },
       { label: "Innovation", href: "/list/184" },

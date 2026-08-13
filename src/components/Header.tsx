@@ -15,14 +15,14 @@ interface NavItem {
 const navChildren = {
   about: {
     zh: [
-      { label: "公司简介", href: "/list/6#about1", internal: true },
-      { label: "核心价值", href: "/list/6#about2", internal: true },
-      { label: "企业实景", href: "/list/6#about3", internal: true },
+      { label: "公司简介", href: "/#about1", internal: true },
+      { label: "核心价值", href: "/#about2", internal: true },
+      { label: "企业实景", href: "/#about3", internal: true },
     ],
     en: [
-      { label: "Company Profile", href: "/list/6#about1", internal: true },
-      { label: "Core Values", href: "/list/6#about2", internal: true },
-      { label: "Factory Gallery", href: "/list/6#about3", internal: true },
+      { label: "Company Profile", href: "/#about1", internal: true },
+      { label: "Core Values", href: "/#about2", internal: true },
+      { label: "Factory Gallery", href: "/#about3", internal: true },
     ],
   },
   applications: {
@@ -42,8 +42,8 @@ const navChildren = {
 } satisfies Record<string, Record<Locale, { label: string; href: string; internal: boolean }[]>>;
 
 const navToParentMap: Record<string, number> = {
-  "/list/6": 1,
-  "/list/1": 2,
+  "/list/6": 0,
+  "/list/1": 1,
   "/list/190": 2,
   "/list/191": 2,
   "/list/192": 2,
@@ -85,7 +85,7 @@ export default function Header({ locale = "zh" }: { locale?: Locale }) {
   const languageHref = localizedPath(altPath, otherLocale);
 
   const navItems: NavItem[] = content.nav.map((item, index) => {
-    if (index === 1) {
+    if (index === 0) {
       return { ...item, children: navChildren.about[locale] };
     }
     if (index === 2) {
@@ -123,7 +123,7 @@ export default function Header({ locale = "zh" }: { locale?: Locale }) {
       <header className="fixed top-0 left-0 w-full h-[140px] bg-white z-[9999999] transition-all duration-[0.3s] min-w-[1180px]">
         <div className="container-site h-[140px]">
           <div className="float-left mt-[43px] transition-all duration-[0.3s]">
-            <Link href={localizedPath("/list/6", locale)} className="block">
+            <Link href={localizedPath("/", locale)} className="block">
               <Image src={content.brand.logo} alt={content.brand.shortName} width={171} height={92} priority className="h-[57px] w-auto object-contain" />
             </Link>
           </div>
