@@ -87,8 +87,8 @@ export const siteContent = {
         "为全国金属制品企业提供优质产品和高效服务，持续钻研金属表面处理技术，努力向国际先进水平看齐。",
     },
     nav: [
+      { label: "公司首页", href: "/list/1" },
       { label: "关于世蕙鸣", href: "/" },
-      { label: "网站首页", href: "/list/1" },
       { label: "公司产业", href: "/list/190" },
       { label: "行业应用", href: "/list/193" },
       { label: "科技创新", href: "/list/184" },
@@ -391,7 +391,7 @@ export const siteContent = {
       phone: "13600258452",
       service: "24小时内专家级技术响应",
       address: "广东省东莞市泉和街2号",
-      email: "info@shihuiming.com",
+      email: "hsmhg@163.com",
     },
   },
   en: {
@@ -415,8 +415,8 @@ export const siteContent = {
         "To provide premium products and efficient services for metal product enterprises nationwide, continuously delve into metal surface treatment technologies, and align with advanced international standards.",
     },
     nav: [
-      { label: "About", href: "/" },
       { label: "Home", href: "/list/1" },
+      { label: "About", href: "/" },
       { label: "Industries", href: "/list/190" },
       { label: "Applications", href: "/list/193" },
       { label: "Innovation", href: "/list/184" },
@@ -719,7 +719,7 @@ export const siteContent = {
       phone: "13600258452",
       service: "Expert technical response within 24 hours",
       address: "Dongguan, Guangdong, China",
-      email: "info@shihuiming.com",
+      email: "hsmhg@163.com",
     },
   },
 } satisfies Record<Locale, {
