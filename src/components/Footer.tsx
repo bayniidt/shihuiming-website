@@ -14,9 +14,9 @@ function getFooterColumns(locale: Locale): FooterColumn[] {
       title: content.nav[0].label,
       href: "/",
       children: [
-        { label: locale === "zh" ? "公司简介" : "Company Profile", href: "/#about1" },
-        { label: content.labels.coreValues, href: "/#about2" },
-        { label: content.labels.gallery, href: "/#about3" },
+        { label: locale === "zh" ? "公司简介" : "Company Profile", href: "/list/1#about1" },
+        { label: content.labels.coreValues, href: "/list/1#about2" },
+        { label: content.labels.gallery, href: "/list/1#about3" },
       ],
     },
     {

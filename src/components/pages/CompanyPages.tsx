@@ -168,10 +168,10 @@ export function AboutPage({ locale }: { locale: Locale }) {
       <Subnav
         locale={locale}
         links={[
-          { text: locale === "zh" ? "公司简介" : "Company Profile", href: "/#about1", cur: true },
+          { text: locale === "zh" ? "公司简介" : "Company Profile", href: "/list/1#about1", cur: true },
           { text: content.labels.mission, href: "/#mission" },
-          { text: content.labels.coreValues, href: "/#about2" },
-          { text: content.labels.gallery, href: "/#about3" },
+          { text: content.labels.coreValues, href: "/list/1#about2" },
+          { text: content.labels.gallery, href: "/list/1#about3" },
         ]}
       />
       <section id="about1" className="py-[80px] bg-white">

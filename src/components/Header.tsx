@@ -15,14 +15,14 @@ interface NavItem {
 const navChildren = {
   about: {
     zh: [
-      { label: "公司简介", href: "/#about1", internal: true },
-      { label: "核心价值", href: "/#about2", internal: true },
-      { label: "企业实景", href: "/#about3", internal: true },
+      { label: "公司简介", href: "/list/1#about1", internal: true },
+      { label: "核心价值", href: "/list/1#about2", internal: true },
+      { label: "企业实景", href: "/list/1#about3", internal: true },
     ],
     en: [
-      { label: "Company Profile", href: "/#about1", internal: true },
-      { label: "Core Values", href: "/#about2", internal: true },
-      { label: "Factory Gallery", href: "/#about3", internal: true },
+      { label: "Company Profile", href: "/list/1#about1", internal: true },
+      { label: "Core Values", href: "/list/1#about2", internal: true },
+      { label: "Factory Gallery", href: "/list/1#about3", internal: true },
     ],
   },
   applications: {
@@ -43,7 +43,7 @@ const navChildren = {
 
 const navToParentMap: Record<string, number> = {
   "/list/6": 1,
-  "/list/1": 0,
+  "/list/1": 1,
   "/list/190": 2,
   "/list/191": 2,
   "/list/192": 2,
@@ -79,7 +79,7 @@ export default function Header({ locale = "zh" }: { locale?: Locale }) {
   const content = siteContent[locale];
 
   const normalPath = stripLocale(pathname);
-  const activeIndex = normalPath.startsWith("/list/products/") ? 2 : navToParentMap[normalPath] ?? (normalPath === "/" ? 1 : -1);
+  const activeIndex = normalPath.startsWith("/list/products/") ? 2 : navToParentMap[normalPath] ?? (normalPath === "/" ? 0 : -1);
   const otherLocale: Locale = locale === "zh" ? "en" : "zh";
   const altPath = normalPath === "/" ? "/" : normalPath;
   const languageHref = localizedPath(altPath, otherLocale);
