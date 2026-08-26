@@ -164,7 +164,7 @@ export function AboutPage({ locale }: { locale: Locale }) {
   const content = siteContent[locale];
   return (
     <>
-      <Banner title={content.nav[0].label} subtitle={content.brand.slogan} bgImage={companyImages[6]} offsetRight />
+      <Banner title={content.nav[1].label} subtitle={content.brand.slogan} bgImage={companyImages[6]} offsetRight />
       <Subnav
         locale={locale}
         links={[
